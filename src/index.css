@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bone: #FDFBF7;
+    --color-ivory: #F7F5F0;
+    --color-sand: #E6E2DD;
+    --color-charcoal: #2D2B28;
+    --color-dark: #111111;
+    --color-muted: #6E6A64;
+    --color-gold: #A68A56;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #FDFBF7;
+    color: #2D2B28;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #111111;
+    color: #FDFBF7;
+  }
+
+  /* R3: GENEROUS TYPOGRAPHY & ANTI-NARROW EDITORIAL WRAPPING */
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+
+  p, .prose-editorial {
+    text-wrap: pretty;
+  }
+}
+
+/* 60-85 Character Line-Length Bounds */
+.max-w-prose-optimal {
+  max-width: 75ch;
+}
+.max-w-prose-wide {
+  max-width: 85ch;
+}
+.max-w-prose-compact {
+  max-width: 60ch;
+}
+
+/* Custom Minimal Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F5F0;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8D2C8;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8A8680;
+}
+
+/* Marquee infinite animation helper */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation-name: marquee;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Italic descender clearance safety class */
+.descender-safe {
+  padding-bottom: 0.15em;
+  line-height: 1.15;
+}
+
+/* ============================================================ */
+/* BESPOKE LUXURY HIGH-FASHION ANIMATIONS & EFFECTS             */
+/* ============================================================ */
+
+/* 1. Satin Sheen Reflection Sweep */
+@keyframes satinSheen {
+  0% {
+    transform: translateX(-150%) skewX(-25deg);
+    opacity: 0;
+  }
+  35% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(250%) skewX(-25deg);
+    opacity: 0;
+  }
+}
+
+.satin-sheen-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.satin-sheen-box::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.45) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: translateX(-150%) skewX(-25deg);
+  pointer-events: none;
+  z-index: 5;
+}
+
+.group:hover .satin-sheen-box::after {
+  animation: satinSheen 1.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* 2. Ambient Film Grain Texture */
+.luxury-film-grain {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0.032;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* 3. Luxury Aura Breathing Glow */
+@keyframes auraPulse {
+  0%, 100% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0.35;
+  }
+  50% {
+    transform: scale(1.15) translate(-4%, 4%);
+    opacity: 0.65;
+  }
+}
+
+.animate-luxury-aura {
+  animation: auraPulse 10s ease-in-out infinite alternate;
+}
+
+/* 4. Luxury Underline Expansion */
+.luxury-link-underline {
+  position: relative;
+}
+
+.luxury-link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 1.5px;
+  background-color: var(--color-gold);
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.luxury-link-underline:hover::after {
+  width: 100%;
+}
+
+/* 5. Smooth Fade Up Reveal on Mount */
+@keyframes luxuryRevealUp {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-reveal-up {
+  animation: luxuryRevealUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation-duration: 0s !important;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

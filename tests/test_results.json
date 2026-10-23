@@ -1,0 +1,827 @@
+{
+  "timestamp": "2026-10-23T14:48:00.850Z",
+  "environment": {
+    "nodeVersion": "v24.19.0",
+    "platform": "win32",
+    "arch": "x64"
+  },
+  "metrics": {
+    "total": 129,
+    "passed": 129,
+    "failed": 0,
+    "durationMs": 60,
+    "successRate": "100.00%"
+  },
+  "tiers": [
+    {
+      "tierName": "Tier 1: Feature Coverage",
+      "total": 93,
+      "passed": 93,
+      "failed": 0,
+      "duration": 46,
+      "results": [
+        {
+          "suite": "Feature 1: Slide 0 OLED Cover (Page0_Copyright)",
+          "test": "1.1 Direct Storefront Entry (currentPage === 1) & Copyright Modal on demand",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 1: Slide 0 OLED Cover (Page0_Copyright)",
+          "test": "1.2 Full viewport 100vh / 100vw container styling is applied",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 1: Slide 0 OLED Cover (Page0_Copyright)",
+          "test": "1.3 Pure OLED black (#000000 / bg-black) background styling",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 1: Slide 0 OLED Cover (Page0_Copyright)",
+          "test": "1.4 Pure white (#FFFFFF / text-white) high-contrast foreground styling",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 1: Slide 0 OLED Cover (Page0_Copyright)",
+          "test": "1.5 Navigation bars and standard footers are completely absent on Slide 0",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 1: Slide 0 OLED Cover (Page0_Copyright)",
+          "test": "1.6 Component exports clean named or default Page0_Copyright",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 2: 5-Row Diagonal Marquee",
+          "test": "2.1 Exactly 5 diagonal rows are instantiated",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 2: 5-Row Diagonal Marquee",
+          "test": "2.2 Rotation angle is configured precisely at -32deg",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 2: 5-Row Diagonal Marquee",
+          "test": "2.3 Each kinetic row displays uppercase \"DESIGN BY VUONGGIA\"",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 2: 5-Row Diagonal Marquee",
+          "test": "2.4 Marquee duration adheres to 60s - 70s slow elegant cadence",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 2: 5-Row Diagonal Marquee",
+          "test": "2.5 Alternating rows utilize inverted/reverse motion direction",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 2: 5-Row Diagonal Marquee",
+          "test": "2.6 Font family utilizes Anton / monumental high-impact display serif or sans",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 3: Frosted Glass Copyright Card",
+          "test": "3.1 Frosted glass aesthetic utilizes backdrop blur and translucent dark background",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 3: Frosted Glass Copyright Card",
+          "test": "3.2 Title displays \"DESIGN BY VUONGGIA\" with skewed VUONGGIA insignia box",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 3: Frosted Glass Copyright Card",
+          "test": "3.3 Badge declares verbatim \"THUỘC QUYỀN SỞ HỮU CỦA VUONGGIA\"",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 3: Frosted Glass Copyright Card",
+          "test": "3.4 Anti-commercial clause contains verbatim non-negotiable legal text",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 3: Frosted Glass Copyright Card",
+          "test": "3.5 Dismiss button [X] is provided to toggle card visibility",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 3: Frosted Glass Copyright Card",
+          "test": "3.6 Primary CTA button to explore collection is prominently rendered",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 4: 1-Click Contact Copy Utility",
+          "test": "4.1 Official Email is verbatim nguyennhu19022008@gmail.com",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 4: 1-Click Contact Copy Utility",
+          "test": "4.2 Official Hotline is verbatim 0876637806",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 4: 1-Click Contact Copy Utility",
+          "test": "4.3 Copy utility handles clipboard writing with secure fallback",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 4: 1-Click Contact Copy Utility",
+          "test": "4.4 Visual feedback state updates to \"ĐÃ CHÉP\" upon copy action",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 4: 1-Click Contact Copy Utility",
+          "test": "4.5 Feedback auto-resets after delay (~2500ms)",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 4: 1-Click Contact Copy Utility",
+          "test": "4.6 Simulator verifies email & phone copy return exact values",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 5: Keyboard Shortcuts Navigation",
+          "test": "5.1 Pressing ArrowRight transitions to Page 1 / closes Modal",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 5: Keyboard Shortcuts Navigation",
+          "test": "5.2 Pressing Space transitions to Page 1 / closes Modal",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 5: Keyboard Shortcuts Navigation",
+          "test": "5.3 Pressing Enter transitions to Page 1 / closes Modal",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 5: Keyboard Shortcuts Navigation",
+          "test": "5.4 Pressing Escape toggles card dismissal state",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 5: Keyboard Shortcuts Navigation",
+          "test": "5.5 Non-navigation keys (e.g., Tab, ArrowDown, A) do not trigger page change",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 5: Keyboard Shortcuts Navigation",
+          "test": "5.6 Page0_Copyright event listener cleans up on unmount",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 6: Editorial Header & Navigation",
+          "test": "6.1 Header file exists in components directory",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 6: Editorial Header & Navigation",
+          "test": "6.2 Brand logo displays VUONGGIA with luxury typography styling",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 6: Editorial Header & Navigation",
+          "test": "6.3 Cart button is rendered with real-time count badge",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 6: Editorial Header & Navigation",
+          "test": "6.4 Link/trigger to return to Slide 0 copyright screen exists",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 6: Editorial Header & Navigation",
+          "test": "6.5 Zero emojis in Header code",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 6: Editorial Header & Navigation",
+          "test": "6.6 Header integrates Lucide React vector icons",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 7: Asymmetrical Hero Lookbook",
+          "test": "7.1 HeroLookbook component file exists",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 7: Asymmetrical Hero Lookbook",
+          "test": "7.2 Hero incorporates asymmetric layout styling",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 7: Asymmetrical Hero Lookbook",
+          "test": "7.3 Editorial campaign narrative headline is present",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 7: Asymmetrical Hero Lookbook",
+          "test": "7.4 CTA button smoothly guides visitor into collection",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 7: Asymmetrical Hero Lookbook",
+          "test": "7.5 Imagery uses high-resolution photography asset",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 7: Asymmetrical Hero Lookbook",
+          "test": "7.6 Zero emojis in HeroLookbook code",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 8: 5-Category Showcase",
+          "test": "8.1 CategoryShowcase component file exists",
+          "passed": true,
+          "duration": 1
+        },
+        {
+          "suite": "Feature 8: 5-Category Showcase",
+          "test": "8.2 Exactly 5 core categories are supported in products.js",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 8: 5-Category Showcase",
+          "test": "8.3 CategoryShowcase references categories or onSelectCategory",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 8: 5-Category Showcase",
+          "test": "8.4 Category cards include hover micro-interactions",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 8: 5-Category Showcase",
+          "test": "8.5 Responsive layout across mobile/tablet/desktop",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 8: 5-Category Showcase",
+          "test": "8.6 Zero emojis in CategoryShowcase",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 9: Magazine Lookbook Grid & Product Catalog",
+          "test": "9.1 MagazineLookbookGrid component file exists",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 9: Magazine Lookbook Grid & Product Catalog",
+          "test": "9.2 Catalog contains at least 12 handcrafted bespoke products",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 9: Magazine Lookbook Grid & Product Catalog",
+          "test": "9.3 Every product model contains id, name, category, price, colors, sizes",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 9: Magazine Lookbook Grid & Product Catalog",
+          "test": "9.4 Category filter tabs allow switching categories",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 9: Magazine Lookbook Grid & Product Catalog",
+          "test": "9.5 ProductCard provides Quick View and Buy Now triggers",
+          "passed": true,
+          "duration": 1
+        },
+        {
+          "suite": "Feature 9: Magazine Lookbook Grid & Product Catalog",
+          "test": "9.6 Price formatting in Vietnamese Dong (VND)",
+          "passed": true,
+          "duration": 24
+        },
+        {
+          "suite": "Feature 10: Quick View Modal",
+          "test": "10.1 Simulator opens and closes Quick View modal cleanly",
+          "passed": true,
+          "duration": 1
+        },
+        {
+          "suite": "Feature 10: Quick View Modal",
+          "test": "10.2 Modal allows adding product with selected color and size into cart",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 10: Quick View Modal",
+          "test": "10.3 Quick View supports instantaneous \"Mua ngay\" transition",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 10: Quick View Modal",
+          "test": "10.4 Composition and fabric specs are present in catalog items",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 10: Quick View Modal",
+          "test": "10.5 Multiple color swatches are defined for luxury garments",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 10: Quick View Modal",
+          "test": "10.6 Sizing standard S/M/L/XL is supported with measurements",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 11: Quick Cart Drawer",
+          "test": "11.1 Adding item to cart updates total count and subtotal",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 11: Quick Cart Drawer",
+          "test": "11.2 Incrementing quantity updates cart subtotal synchronously",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 11: Quick Cart Drawer",
+          "test": "11.3 Decrementing quantity updates cart subtotal synchronously",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 11: Quick Cart Drawer",
+          "test": "11.4 Removing item empties cart and resets subtotal to 0",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 11: Quick Cart Drawer",
+          "test": "11.5 Cart drawer toggle controls visibility",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 11: Quick Cart Drawer",
+          "test": "11.6 Collation of identical items with same color and size increments quantity",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 12: Quick Order Form & Address Validation",
+          "test": "12.1 Validates customer name is not empty",
+          "passed": true,
+          "duration": 1
+        },
+        {
+          "suite": "Feature 12: Quick Order Form & Address Validation",
+          "test": "12.2 Validates phone number against Vietnamese telecommunications standard",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 12: Quick Order Form & Address Validation",
+          "test": "12.3 Validates shipping address is present",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 12: Quick Order Form & Address Validation",
+          "test": "12.4 Discount coupon code \"VUONGGIA\" grants 10% discount",
+          "passed": true,
+          "duration": 1
+        },
+        {
+          "suite": "Feature 12: Quick Order Form & Address Validation",
+          "test": "12.5 Luxury velvet gift wrap adds 150.000 VND fee",
+          "passed": true,
+          "duration": 1
+        },
+        {
+          "suite": "Feature 12: Quick Order Form & Address Validation",
+          "test": "12.6 Complimentary luxury shipping fee is 0 VND",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 13: Mock Payment Methods & Royal Confirmation Receipt",
+          "test": "13.1 Supports COD (Thử đồ tại gia) payment method",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 13: Mock Payment Methods & Royal Confirmation Receipt",
+          "test": "13.2 Supports VietQR payment method",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 13: Mock Payment Methods & Royal Confirmation Receipt",
+          "test": "13.3 Supports Card (Visa/Mastercard) payment method",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 13: Mock Payment Methods & Royal Confirmation Receipt",
+          "test": "13.4 Generates official Order ID conforming to VG-2026-XXXX format",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 13: Mock Payment Methods & Royal Confirmation Receipt",
+          "test": "13.5 Successful order clears shopping cart in full checkout mode",
+          "passed": true,
+          "duration": 1
+        },
+        {
+          "suite": "Feature 13: Mock Payment Methods & Royal Confirmation Receipt",
+          "test": "13.6 Order confirmation stores timestamp and item breakdown",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 14: R1 Direct Storefront Entry & Fullscreen Copyright Modal",
+          "test": "14.1 App initializes directly into Storefront (useState(1))",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 14: R1 Direct Storefront Entry & Fullscreen Copyright Modal",
+          "test": "14.2 Page0_Copyright supports fullscreen modal props (isOpen, onClose, onNextPage)",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 14: R1 Direct Storefront Entry & Fullscreen Copyright Modal",
+          "test": "14.3 Header renders standard VG © 2026 trigger button with ShieldCheck icon",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 14: R1 Direct Storefront Entry & Fullscreen Copyright Modal",
+          "test": "14.4 Footer renders standard VG © 2026 trigger buttons with ShieldCheck icon",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 14: R1 Direct Storefront Entry & Fullscreen Copyright Modal",
+          "test": "14.5 StoreContext manages isCopyrightModalOpen with dedicated open and close actions",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 15: R2 16:9 Widescreen Split 2-Column Layouts",
+          "test": "15.1 HeroLookbook utilizes balanced 2-column split and 16:9 widescreen image",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 15: R2 16:9 Widescreen Split 2-Column Layouts",
+          "test": "15.2 CategoryShowcase utilizes balanced 2-column master-detail layout with 16:9 showcase frame",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 15: R2 16:9 Widescreen Split 2-Column Layouts",
+          "test": "15.3 MagazineLookbookGrid uses 2-column catalog and 16:9 lookbook interlude",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 15: R2 16:9 Widescreen Split 2-Column Layouts",
+          "test": "15.4 ProductCard frames merchandise in 16:9 widescreen ratio with centered focal point",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 15: R2 16:9 Widescreen Split 2-Column Layouts",
+          "test": "15.5 AtelierStory utilizes balanced 2-column layout and 16:9 artisan workshop image",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 15: R2 16:9 Widescreen Split 2-Column Layouts",
+          "test": "15.6 Footer utilizes balanced 2-column architectural split",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 16: R3 Generous Typography & Anti-Narrow Wrapping",
+          "test": "16.1 Global index.css enforces text-wrap: balance for headings and text-wrap: pretty for paragraphs",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 16: R3 Generous Typography & Anti-Narrow Wrapping",
+          "test": "16.2 Character-width bounds (60ch, 75ch, 85ch) defined in CSS and Tailwind configuration",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 16: R3 Generous Typography & Anti-Narrow Wrapping",
+          "test": "16.3 Primary headings across components utilize text-balance class",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Feature 16: R3 Generous Typography & Anti-Narrow Wrapping",
+          "test": "16.4 Primary descriptions across components utilize text-pretty and character bounds",
+          "passed": true,
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "tierName": "Tier 2: Boundary & Corner Cases",
+      "total": 22,
+      "passed": 22,
+      "failed": 0,
+      "duration": 3,
+      "results": [
+        {
+          "suite": "Group 1: Slide 0 State & Event Boundaries",
+          "test": "B1.1 Dismissing card hides card and reveals floating reopening triggers",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Group 1: Slide 0 State & Event Boundaries",
+          "test": "B1.2 Repeated Escape key presses cleanly alternate card visibility",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Group 1: Slide 0 State & Event Boundaries",
+          "test": "B1.3 Keyboard navigation shortcuts are strictly suppressed when focused in INPUT or TEXTAREA",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Group 1: Slide 0 State & Event Boundaries",
+          "test": "B1.4 When already on Page 1, Slide 0 keyboard shortcuts do nothing",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Group 2: Cart Quantities & Empty State Boundaries",
+          "test": "B2.1 Empty cart subtotal and total count are exactly 0",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Group 2: Cart Quantities & Empty State Boundaries",
+          "test": "B2.2 Submitting checkout with empty cart throws an explicit error",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Group 2: Cart Quantities & Empty State Boundaries",
+          "test": "B2.3 Decrementing quantity of single item (qty = 1) from cart removes it completely",
+          "passed": true,
+          "duration": 1
+        },
+        {
+          "suite": "Group 2: Cart Quantities & Empty State Boundaries",
+          "test": "B2.4 Adding item with zero or negative quantity is safely ignored",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Group 2: Cart Quantities & Empty State Boundaries",
+          "test": "B2.5 High-quantity stress test (e.g., 50 items) calculates without numeric overflow",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Group 3: Phone Number Validation Boundary Matrix",
+          "test": "B3.1 Standard 10-digit mobile prefixes (09, 08, 07, 03, 05) are valid",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Group 3: Phone Number Validation Boundary Matrix",
+          "test": "B3.2 International +84 format is recognized and valid",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Group 3: Phone Number Validation Boundary Matrix",
+          "test": "B3.3 Phone numbers formatted with spaces or dashes are cleanly normalized",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Group 3: Phone Number Validation Boundary Matrix",
+          "test": "B3.4 Malformed, alphabetic, or out-of-bounds phone numbers are rejected",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Group 4: Coupon Code Robustness & Precision",
+          "test": "B4.1 \"VUONGGIA\" coupon applies exact 10% discount",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Group 4: Coupon Code Robustness & Precision",
+          "test": "B4.2 Coupon code is case-insensitive (vuonggia, VuongGia)",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Group 4: Coupon Code Robustness & Precision",
+          "test": "B4.3 Coupon code ignores leading/trailing whitespace",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Group 4: Coupon Code Robustness & Precision",
+          "test": "B4.4 Invalid, unrecognized, or empty coupon codes apply 0 discount",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Group 4: Coupon Code Robustness & Precision",
+          "test": "B4.5 Discount rounds to nearest integer Dong (no fractional decimals)",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Group 5: Product Variations & Customer Data Integrity",
+          "test": "B5.1 Same product in different sizes creates separate cart items",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Group 5: Product Variations & Customer Data Integrity",
+          "test": "B5.2 Same product in different colors creates separate cart items",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Group 5: Product Variations & Customer Data Integrity",
+          "test": "B5.3 Customer name and address with Vietnamese unicode characters are preserved",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Group 5: Product Variations & Customer Data Integrity",
+          "test": "B5.4 Whitespace-only customer name or address is rejected",
+          "passed": true,
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "tierName": "Tier 3: Cross-Feature Interactions",
+      "total": 11,
+      "passed": 11,
+      "failed": 0,
+      "duration": 2,
+      "results": [
+        {
+          "suite": "Interaction 1: Page 0 / Storefront Navigation Lifecycle",
+          "test": "I1.1 Full navigation roundtrip between Slide 0 and Storefront retains cart state",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Interaction 2: Category Filter to Quick View Pipeline",
+          "test": "I2.1 Category selection filters products and opens matching Quick View",
+          "passed": true,
+          "duration": 1
+        },
+        {
+          "suite": "Interaction 3: Quick View to Cart Drawer Pipeline",
+          "test": "I3.1 Customizing color and size in Quick View adds item and triggers Cart Drawer",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Interaction 4: \"Mua Ngay\" Isolation vs Cart Checkout",
+          "test": "I4.1 \"Mua ngay\" single item checkout does NOT wipe existing general cart items",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Interaction 4: \"Mua Ngay\" Isolation vs Cart Checkout",
+          "test": "I4.2 Full cart checkout DOES clear general cart after completion",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Interaction 5: Modal Exclusivity Invariant",
+          "test": "I5.1 Opening one modal automatically dismisses any other open modal",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Interaction 6: Order Lifecycle & Receipt Reset",
+          "test": "I6.1 Order confirmation modal displays receipt and resets cleanly",
+          "passed": true,
+          "duration": 1
+        },
+        {
+          "suite": "Interaction 7: Gift Wrap Toggle Dynamic Calculations",
+          "test": "I7.1 Toggling luxury gift box dynamically adds and removes 150.000₫",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Interaction 8: Sequential Orders Idempotency",
+          "test": "I8.1 Successive orders generate distinct order identifiers",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Interaction 9: Multi-Quantity Cart Drawer Sync with Quick Order",
+          "test": "I9.1 Modifying quantities inside Cart Drawer synchronizes immediately with Quick Order summary",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Interaction 10: Repeat Customer Shopping Workflow",
+          "test": "I10.1 Completing first order clears cart and allows clean second customer transaction",
+          "passed": true,
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "tierName": "Tier 4: Real-World Scenarios",
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "duration": 1,
+      "results": [
+        {
+          "suite": "Scenario A: The First-Time Luxury Connoisseur (Thùy Linh - Hà Nội)",
+          "test": "A.1 Complete Journey: Direct Storefront entry & Copyright Modal -> Cashmere Coat -> Quick View -> Buy Now -> COD Order",
+          "passed": true,
+          "duration": 1
+        },
+        {
+          "suite": "Scenario B: The VIP Bespoke Patron (Hoàng Nam - TP. Hồ Chí Minh)",
+          "test": "B.1 Complete Journey: Slide 0 card dismiss -> Multi-item Cart -> Coupon VUONGGIA -> VietQR Order",
+          "passed": true,
+          "duration": 0
+        },
+        {
+          "suite": "Scenario C: The Curated Luxury Gift Buyer (Minh Châu - Đà Nẵng)",
+          "test": "C.1 Complete Journey: Direct Storefront -> Scarf Accessory (Qty 2) -> Velvet Gift Box -> Visa Payment",
+          "passed": true,
+          "duration": 0
+        }
+      ]
+    }
+  ]
+}
