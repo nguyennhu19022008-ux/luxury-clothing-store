@@ -13,11 +13,13 @@ import { QuickOrderModal } from './components/QuickOrderModal';
 import { OrderSuccessModal } from './components/OrderSuccessModal';
 import { LuxuryCursor } from './components/LuxuryCursor';
 import { LuxuryTransitionCurtain } from './components/LuxuryTransitionCurtain';
+import { InteractiveOpeningCurtain } from './components/InteractiveOpeningCurtain';
 import { FabricInspectorModal } from './components/FabricInspectorModal';
 
 function AppContent() {
   // Direct Storefront Entry: Starts with currentPage === 1 by default
   const [currentPage, setCurrentPage] = useState(1);
+  const [isCurtainUnveiled, setIsCurtainUnveiled] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [isCurtainActive, setIsCurtainActive] = useState(false);
   const [isFabricModalOpen, setIsFabricModalOpen] = useState(false);
@@ -35,16 +37,20 @@ function AppContent() {
 
   // Sync title and body background based on page or modal state
   useEffect(() => {
+    if (!isCurtainUnveiled || currentPage === 0 || isCopyrightModalOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
     if (currentPage === 0 || isCopyrightModalOpen) {
       document.body.style.backgroundColor = '#000000';
-      document.body.style.overflow = 'hidden';
       document.title = 'DESIGN BY VUONGGIA — Intellectual Property Certificate';
     } else {
       document.body.style.backgroundColor = '#FDFBF7';
-      document.body.style.overflow = 'auto';
       document.title = 'VUONGGIA — Luxury Minimalist Atelier';
     }
-  }, [currentPage, isCopyrightModalOpen]);
+  }, [currentPage, isCopyrightModalOpen, isCurtainUnveiled]);
 
   // Handlers with Haute Couture Curtain Transitions
   const handleNextPage = () => {
@@ -114,6 +120,13 @@ function AppContent() {
         isTransitioning={isCurtainActive}
         onComplete={() => setIsCurtainActive(false)}
       />
+
+      {/* Interactive Silk Shutter Opening Curtain (Click-to-Unveil) */}
+      {!isCurtainUnveiled && (
+        <InteractiveOpeningCurtain
+          onComplete={() => setIsCurtainUnveiled(true)}
+        />
+      )}
 
       {/* ============================================================ */}
       {/* 1. INTELLECTUAL PROPERTY CERTIFICATE: MODAL / OVERLAY         */}

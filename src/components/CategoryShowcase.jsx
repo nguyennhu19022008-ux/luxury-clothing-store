@@ -62,14 +62,14 @@ export const CategoryShowcase = ({ onSelectCategory }) => {
   };
 
   return (
-    <section ref={sectionRef} id="categories" className="reveal-on-scroll py-20 lg:py-28 bg-luxury-bone border-b border-luxury-sand scroll-mt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section ref={sectionRef} id="categories" className="reveal-on-scroll py-20 lg:py-32 bg-[#F7F4EE] border-b border-[#E3DDD4] scroll-mt-20">
+      <div className="w-full max-w-none px-6 sm:px-12 lg:px-16 xl:px-24 2xl:px-32">
         
         {/* Section Header with text-balance and text-pretty */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 lg:mb-16 pb-6 border-b border-luxury-sand">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 lg:mb-16 pb-6 border-b border-[#E3DDD4]">
           <div>
-            <span className="text-[11px] font-semibold tracking-[0.22em] text-luxury-gold uppercase block mb-2">
-              Bộ Khảo Cứu Chủng Loại
+            <span className="text-[11px] font-semibold tracking-[0.25em] text-luxury-gold uppercase block mb-2">
+              Bộ Khảo Cứu Chủng Loại /// ARCHIVE 2026
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-luxury-dark font-normal tracking-tight text-balance descender-safe">
               Năm Phân Loại May Đo Tinh Tuyển
@@ -80,12 +80,12 @@ export const CategoryShowcase = ({ onSelectCategory }) => {
           </p>
         </div>
 
-        {/* Balanced 2-Column Split: Master Switcher on Left, 16:9 Showcase Frame on Right */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+        {/* Asymmetrical Bento Split: Master Switcher on Left, 16:9 Showcase Frame on Right */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 xl:gap-18 items-center">
           
-          {/* Left Column: Interactive Category Switcher & Details */}
+          {/* Left Column: Interactive Asymmetric Category Switcher & Details */}
           <div className="flex flex-col space-y-4">
-            <div className="space-y-2.5">
+            <div className="space-y-3">
               {CATEGORY_ITEMS.map((item, idx) => {
                 const isActive = item.id === activeId;
                 return (
@@ -93,10 +93,10 @@ export const CategoryShowcase = ({ onSelectCategory }) => {
                     key={item.id}
                     type="button"
                     onClick={() => handleChoose(item.id)}
-                    className={`reveal-child stagger-${idx + 1} w-full p-4 text-left transition-all duration-300 border flex items-center justify-between cursor-pointer ${
+                    className={`reveal-child stagger-${idx + 1} w-full p-4 sm:p-5 text-left transition-all duration-300 border rounded-xl flex items-center justify-between cursor-pointer ${
                       isActive
-                        ? 'bg-luxury-ivory border-luxury-dark shadow-sm translate-x-1'
-                        : 'bg-transparent border-luxury-sand hover:border-luxury-dark/60 hover:bg-luxury-ivory/50'
+                        ? 'bg-[#EFE9DF] border-luxury-dark shadow-md translate-x-1 sm:translate-x-2'
+                        : 'bg-white/60 border-[#E8E2D7] hover:border-luxury-dark/50 hover:bg-white/90'
                     }`}
                   >
                     <div className="flex items-center gap-4">
@@ -104,17 +104,17 @@ export const CategoryShowcase = ({ onSelectCategory }) => {
                         0{idx + 1}
                       </span>
                       <div>
-                        <h3 className="font-serif text-lg font-medium text-luxury-dark text-balance">
+                        <h3 className="font-serif text-lg sm:text-xl font-medium text-luxury-dark text-balance">
                           {item.title}
                         </h3>
-                        <span className="text-[11px] font-mono text-luxury-muted uppercase tracking-wider block">
+                        <span className="text-[11px] font-mono text-luxury-muted uppercase tracking-wider block mt-0.5">
                           {item.tagline}
                         </span>
                       </div>
                     </div>
                     <div className="flex items-center gap-3">
                       <span className="text-xs font-mono text-luxury-muted hidden sm:inline">{item.count}</span>
-                      <ArrowUpRight className={`w-4 h-4 transition-transform ${isActive ? 'text-luxury-dark rotate-45' : 'text-luxury-muted'}`} />
+                      <ArrowUpRight className={`w-4 h-4 transition-transform duration-300 ${isActive ? 'text-luxury-dark rotate-45' : 'text-luxury-muted'}`} />
                     </div>
                   </button>
                 );
@@ -122,8 +122,8 @@ export const CategoryShowcase = ({ onSelectCategory }) => {
             </div>
 
             {/* Active Detail & Collection CTA */}
-            <div className="pt-4 border-t border-luxury-sand flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-              <p className="text-xs text-luxury-muted max-w-[75ch] text-pretty">
+            <div className="pt-4 border-t border-[#E3DDD4] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <p className="text-xs text-luxury-muted max-w-[75ch] text-pretty leading-relaxed">
                 {activeItem.description}
               </p>
               <a
@@ -133,7 +133,7 @@ export const CategoryShowcase = ({ onSelectCategory }) => {
                   const el = document.getElementById('collection');
                   if (el) el.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-luxury-dark text-luxury-bone text-xs font-semibold uppercase tracking-wider hover:bg-neutral-800 transition-colors shrink-0"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-luxury-dark text-luxury-bone text-xs font-semibold uppercase tracking-wider hover:bg-neutral-800 transition-colors shrink-0 rounded-full"
               >
                 <span>Xem {activeItem.title}</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -141,8 +141,8 @@ export const CategoryShowcase = ({ onSelectCategory }) => {
             </div>
           </div>
 
-          {/* Right Column: 16:9 Widescreen Showcase Image Frame */}
-          <div className="relative w-full aspect-[16/9] bg-luxury-ivory border border-luxury-sand overflow-hidden shadow-2xl satin-sheen-box group">
+          {/* Right Column: 16:9 Widescreen Showcase Image Frame with Warm Camel Frame */}
+          <div className="relative w-full aspect-[16/9] bg-luxury-ivory border border-[#D8D0C3] rounded-2xl overflow-hidden shadow-2xl satin-sheen-box group">
             <img
               src={activeItem.image}
               alt={activeItem.title}
@@ -153,15 +153,15 @@ export const CategoryShowcase = ({ onSelectCategory }) => {
               loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
-            <div className="absolute top-4 left-4 bg-luxury-bone/95 backdrop-blur-sm px-3 py-1 border border-luxury-sand text-[10.5px] font-mono tracking-widest text-luxury-dark font-bold uppercase">
+            <div className="absolute top-4 left-4 bg-luxury-bone/95 backdrop-blur-sm px-3.5 py-1 rounded-full border border-luxury-sand text-[10.5px] font-mono tracking-widest text-luxury-dark font-bold uppercase shadow-sm">
               PHÂN LOẠI /// {activeItem.title.toUpperCase()}
             </div>
-            <div className="absolute bottom-4 left-4 right-4 bg-luxury-bone/90 backdrop-blur-md p-3.5 border border-luxury-sand flex items-center justify-between">
+            <div className="absolute bottom-4 left-4 right-4 bg-luxury-bone/90 backdrop-blur-md p-3.5 sm:p-4 rounded-xl border border-luxury-sand flex items-center justify-between shadow-lg">
               <div>
                 <div className="text-[10px] font-mono tracking-wider text-luxury-gold uppercase font-bold">
                   {activeItem.tagline}
                 </div>
-                <div className="font-serif text-base text-luxury-dark font-medium text-balance">
+                <div className="font-serif text-base sm:text-lg text-luxury-dark font-medium text-balance mt-0.5">
                   {activeItem.title}
                 </div>
               </div>

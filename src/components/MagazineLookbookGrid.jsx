@@ -33,8 +33,8 @@ export const MagazineLookbookGrid = ({
   });
 
   return (
-    <section id="collection" className="py-20 lg:py-28 bg-luxury-bone border-b border-luxury-sand scroll-mt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="collection" className="py-20 lg:py-32 bg-luxury-bone border-b border-luxury-sand scroll-mt-20">
+      <div className="w-full max-w-none px-6 sm:px-12 lg:px-16 xl:px-24 2xl:px-32">
         
         {/* Section Header with text-balance and text-pretty */}
         <div ref={headerRef} className="reveal-on-scroll flex flex-col items-center text-center max-w-3xl mx-auto mb-14">

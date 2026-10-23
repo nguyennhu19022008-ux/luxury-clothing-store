@@ -17,11 +17,11 @@ export const HeroLookbook = ({ onExploreClick, onOpenFabricInspector }) => {
         <span>EDITION LIMITÉE</span>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+      <div className="w-full max-w-none px-6 sm:px-12 lg:px-16 xl:px-24 2xl:px-32 py-12 lg:py-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 xl:gap-20 items-center">
           
-          {/* Left: Editorial Narrative & CTAs (Balanced Column) */}
-          <div className="flex flex-col justify-center space-y-6 lg:space-y-8 z-10">
+          {/* Left: Asymmetric 60/40 Editorial Narrative & Haute Couture CTAs */}
+          <div className="flex flex-col justify-center space-y-6 lg:space-y-8 z-10 lg:pr-6 xl:pr-10">
             
             {/* Eyebrow Label with Fabric Inspector Trigger */}
             <div className="flex flex-wrap items-center gap-3">

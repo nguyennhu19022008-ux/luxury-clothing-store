@@ -27,8 +27,8 @@ export const Header = ({ onGoToPage0, cartCount = 0, onOpenCart, onOpenSearch })
   return (
     <>
       {/* Top Haute Couture Ticker Ribbon */}
-      <div className="w-full bg-luxury-dark text-luxury-bone py-1.5 px-4 overflow-hidden border-b border-black select-none z-30">
-        <div className="max-w-7xl mx-auto flex items-center justify-between text-[10px] font-mono tracking-[0.2em] uppercase text-luxury-sand/80">
+      <div className="w-full bg-luxury-dark text-luxury-bone py-1.5 overflow-hidden border-b border-black select-none z-30">
+        <div className="w-full max-w-none px-6 sm:px-12 lg:px-16 xl:px-24 2xl:px-32 flex items-center justify-between text-[10px] font-mono tracking-[0.2em] uppercase text-luxury-sand/80">
           <div className="hidden sm:flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
             <span>ATELIER HÀ NỘI · MỞ CỬA TIẾP ĐÓN</span>
@@ -47,7 +47,7 @@ export const Header = ({ onGoToPage0, cartCount = 0, onOpenCart, onOpenSearch })
       </div>
 
       <header className="sticky top-0 z-40 w-full bg-luxury-bone/90 backdrop-blur-xl border-b border-luxury-sand transition-all animate-island-drop">
-        <div className="max-w-7xl h-[72px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        <div className="w-full max-w-none h-[72px] px-6 sm:px-12 lg:px-16 xl:px-24 2xl:px-32 flex items-center justify-between">
         
         {/* Left: Brand Identity */}
         <div className="flex items-center gap-6">

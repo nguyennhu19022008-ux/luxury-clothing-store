@@ -321,6 +321,60 @@
   animation: modalFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
+/* Full-Bleed Fluid Container Utility */
+.full-bleed-container {
+  width: 100%;
+  max-width: none;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+@media (min-width: 640px) {
+  .full-bleed-container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+@media (min-width: 1024px) {
+  .full-bleed-container {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+@media (min-width: 1280px) {
+  .full-bleed-container {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+@media (min-width: 1536px) {
+  .full-bleed-container {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+
+/* Kinetic Silk Shutter Utilities */
+.curtain-upper {
+  transition: transform 0.75s cubic-bezier(0.77, 0, 0.175, 1);
+  will-change: transform;
+}
+.curtain-lower {
+  transition: transform 0.75s cubic-bezier(0.77, 0, 0.175, 1);
+  will-change: transform;
+}
+
+/* Parallax Layer Utilities */
+.parallax-slow {
+  transform: translateY(var(--parallax-y, 0px));
+  transition: transform 0.1s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+.parallax-fast {
+  transform: translateY(calc(var(--parallax-y, 0px) * 1.5));
+  transition: transform 0.1s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
 /* Reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
   .animate-marquee {

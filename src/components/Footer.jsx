@@ -18,7 +18,7 @@ export const Footer = ({ onGoToPage0 }) => {
 
   return (
     <footer className="bg-luxury-dark text-luxury-bone pt-20 pb-12 border-t border-luxury-sand/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-none px-6 sm:px-12 lg:px-16 xl:px-24 2xl:px-32">
         
         {/* Balanced 2-Column Architectural Split */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 pb-16 border-b border-white/10">
