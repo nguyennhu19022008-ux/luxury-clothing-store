@@ -13,12 +13,14 @@ import { QuickOrderModal } from './components/QuickOrderModal';
 import { OrderSuccessModal } from './components/OrderSuccessModal';
 import { LuxuryCursor } from './components/LuxuryCursor';
 import { LuxuryTransitionCurtain } from './components/LuxuryTransitionCurtain';
+import { FabricInspectorModal } from './components/FabricInspectorModal';
 
 function AppContent() {
   // Direct Storefront Entry: Starts with currentPage === 1 by default
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [isCurtainActive, setIsCurtainActive] = useState(false);
+  const [isFabricModalOpen, setIsFabricModalOpen] = useState(false);
 
   const {
     cartTotalCount,
@@ -147,6 +149,7 @@ function AppContent() {
                 const el = document.getElementById('collection');
                 if (el) el.scrollIntoView({ behavior: 'smooth' });
               }}
+              onOpenFabricInspector={() => setIsFabricModalOpen(true)}
             />
 
             {/* 5 Curator Category Plates */}
@@ -177,6 +180,10 @@ function AppContent() {
       <CartDrawer />
       <QuickOrderModal />
       <OrderSuccessModal />
+      <FabricInspectorModal
+        isOpen={isFabricModalOpen}
+        onClose={() => setIsFabricModalOpen(false)}
+      />
 
     </div>
   );

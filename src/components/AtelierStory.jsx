@@ -32,22 +32,24 @@ export const AtelierStory = () => {
         {/* Narrative Split: Balanced 2-Column Split */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
           
-          {/* Left: 16:9 Widescreen Artisan Photography */}
+          {/* Left: 16:9 Widescreen Artisan Photography with Double-Bezel */}
           <div className="relative w-full">
-            <div className="aspect-[16/9] bg-neutral-200 border border-luxury-sand overflow-hidden relative shadow-2xl satin-sheen-box group">
-              <img
-                src="https://images.unsplash.com/photo-1598554747436-c9293d6a588f?q=80&w=1200&auto=format&fit=crop"
-                alt="Bàn tay nghệ nhân may đo thủ công tại xưởng Maison Vuonggia"
-                className="w-full h-full object-cover object-[center_40%] transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
-              <div className="absolute bottom-4 left-4 right-4 p-3.5 bg-luxury-bone/90 backdrop-blur-sm border border-luxury-sand">
-                <div className="font-mono text-[10px] tracking-widest text-luxury-gold uppercase font-bold">
-                  ATELIER ARCHIVE /// 2026
-                </div>
-                <div className="font-serif text-sm text-luxury-dark font-medium mt-0.5">
-                  Đường kim mũi chỉ thủ công 21 stitches/inch
+            <div className="p-2.5 sm:p-3 bg-luxury-bone/80 rounded-3xl border border-luxury-sand/80 shadow-2xl">
+              <div className="aspect-[16/9] bg-neutral-900 rounded-[calc(1.5rem-0.625rem)] overflow-hidden relative shadow-[inset_0_1px_1px_rgba(255,255,255,0.3)] satin-sheen-box group">
+                <img
+                  src="https://images.unsplash.com/photo-1598554747436-c9293d6a588f?q=80&w=1200&auto=format&fit=crop"
+                  alt="Bàn tay nghệ nhân may đo thủ công tại xưởng Maison Vuonggia"
+                  className="w-full h-full object-cover object-[center_40%] transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute bottom-4 left-4 right-4 p-3.5 bg-luxury-bone/90 backdrop-blur-sm border border-luxury-sand rounded-xl">
+                  <div className="font-mono text-[10px] tracking-widest text-luxury-gold uppercase font-bold">
+                    ATELIER ARCHIVE /// 2026
+                  </div>
+                  <div className="font-serif text-sm text-luxury-dark font-medium mt-0.5">
+                    Đường kim mũi chỉ thủ công 21 stitches/inch
+                  </div>
                 </div>
               </div>
             </div>

@@ -13,8 +13,29 @@ export const Header = ({ onGoToPage0, cartCount = 0, onOpenCart, onOpenSearch })
   ];
 
   return (
-    <header className="sticky top-0 z-40 w-full h-[72px] bg-luxury-bone/90 backdrop-blur-md border-b border-luxury-sand transition-all">
-      <div className="max-w-7xl h-full mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+    <>
+      {/* Top Haute Couture Ticker Ribbon */}
+      <div className="w-full bg-luxury-dark text-luxury-bone py-1.5 px-4 overflow-hidden border-b border-black select-none z-30">
+        <div className="max-w-7xl mx-auto flex items-center justify-between text-[10px] font-mono tracking-[0.2em] uppercase text-luxury-sand/80">
+          <div className="hidden sm:flex items-center gap-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+            <span>ATELIER HÀ NỘI · MỞ CỬA TIẾP ĐÓN</span>
+          </div>
+          <div className="flex items-center gap-3 mx-auto sm:mx-0">
+            <span>AUTOMNE-HIVER 2026</span>
+            <span>•</span>
+            <span className="text-luxury-gold font-bold">100% SỢI TỰ NHIÊN NGUYÊN BẢN</span>
+            <span>•</span>
+            <span className="hidden md:inline">DỊCH VỤ THỬ ĐỒ TẠI GIA ĐỘC BẢN</span>
+          </div>
+          <div className="hidden lg:block text-luxury-muted">
+            GMT+7 HANOI / PARIS
+          </div>
+        </div>
+      </div>
+
+      <header className="sticky top-0 z-40 w-full bg-luxury-bone/90 backdrop-blur-xl border-b border-luxury-sand transition-all">
+        <div className="max-w-7xl h-[72px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         
         {/* Left: Brand Identity */}
         <div className="flex items-center gap-6">
@@ -126,5 +147,6 @@ export const Header = ({ onGoToPage0, cartCount = 0, onOpenCart, onOpenSearch })
         </div>
       )}
     </header>
+    </>
   );
 };

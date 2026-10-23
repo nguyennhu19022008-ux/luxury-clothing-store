@@ -46,10 +46,10 @@ export const ProductCard = ({ product, onQuickView, onQuickOrder }) => {
   };
 
   return (
-    <article className="group flex flex-col bg-luxury-bone border border-luxury-sand hover:border-luxury-dark hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1">
+    <article className="group flex flex-col bg-luxury-bone border border-luxury-sand/80 hover:border-luxury-dark/80 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1 rounded-2xl overflow-hidden p-2.5">
       
-      {/* Visual Frame with Satin Sheen Sweep in 16:9 Widescreen */}
-      <div className="relative aspect-[16/9] w-full overflow-hidden bg-luxury-ivory satin-sheen-box">
+      {/* Visual Frame with Satin Sheen Sweep in 16:9 Widescreen (Double-Bezel Inner Core) */}
+      <div className="relative aspect-[16/9] w-full rounded-xl overflow-hidden bg-luxury-ivory satin-sheen-box shadow-[inset_0_1px_1px_rgba(255,255,255,0.3)]">
         <img
           src={currentImage}
           alt={product.name}
@@ -60,12 +60,12 @@ export const ProductCard = ({ product, onQuickView, onQuickOrder }) => {
         {/* Top Badges */}
         <div className="absolute top-3 left-3 flex flex-col gap-1.5 z-10">
           {product.badge && (
-            <span className="px-2 py-0.5 bg-luxury-bone/95 backdrop-blur-sm text-[10px] font-mono tracking-wider uppercase text-luxury-dark border border-luxury-sand/80 shadow-sm">
+            <span className="px-2.5 py-0.5 bg-luxury-bone/95 backdrop-blur-sm text-[9.5px] font-mono tracking-wider uppercase text-luxury-dark border border-luxury-sand/80 rounded-full shadow-sm">
               {product.badge}
             </span>
           )}
           {product.isNew && (
-            <span className="px-2 py-0.5 bg-luxury-dark text-luxury-bone text-[9px] font-mono tracking-widest uppercase self-start">
+            <span className="px-2.5 py-0.5 bg-luxury-dark text-luxury-bone text-[9px] font-mono tracking-widest uppercase self-start rounded-full">
               NEW
             </span>
           )}
@@ -76,7 +76,7 @@ export const ProductCard = ({ product, onQuickView, onQuickOrder }) => {
           <button
             type="button"
             onClick={handleQuickViewClick}
-            className="flex-1 py-2.5 px-3 bg-luxury-bone/95 hover:bg-luxury-bone text-luxury-dark backdrop-blur-md text-xs font-semibold uppercase tracking-wider border border-luxury-sand flex items-center justify-center gap-1.5 shadow-md active:scale-95 transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-luxury-dark cursor-pointer"
+            className="flex-1 py-2 px-3 bg-luxury-bone/95 hover:bg-luxury-bone text-luxury-dark backdrop-blur-md text-xs font-semibold uppercase tracking-wider border border-luxury-sand rounded-full flex items-center justify-center gap-1.5 shadow-md active:scale-95 transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-luxury-dark cursor-pointer"
             title="Xem chi tiết thiết kế"
           >
             <Eye className="w-3.5 h-3.5" />
@@ -86,7 +86,7 @@ export const ProductCard = ({ product, onQuickView, onQuickOrder }) => {
           <button
             type="button"
             onClick={handleQuickOrderClick}
-            className="flex-1 py-2.5 px-3 bg-luxury-dark hover:bg-neutral-800 text-luxury-bone text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-1.5 shadow-md active:scale-95 transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-luxury-dark cursor-pointer"
+            className="flex-1 py-2 px-3 bg-luxury-dark hover:bg-neutral-800 text-luxury-bone text-xs font-semibold uppercase tracking-wider rounded-full flex items-center justify-center gap-1.5 shadow-md active:scale-95 transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-luxury-dark cursor-pointer"
             title="Mua ngay tác phẩm"
           >
             <ShoppingBag className="w-3.5 h-3.5" />
