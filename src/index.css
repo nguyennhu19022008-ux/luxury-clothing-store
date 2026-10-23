@@ -201,10 +201,137 @@
   animation: luxuryRevealUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
+/* 6. Scroll-Driven Staggered Reveal Engine */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.96) translateY(18px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-scale.is-revealed {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+/* Stagger Delays for Cascade Entrance */
+.stagger-1 { transition-delay: 80ms; }
+.stagger-2 { transition-delay: 160ms; }
+.stagger-3 { transition-delay: 240ms; }
+.stagger-4 { transition-delay: 320ms; }
+.stagger-5 { transition-delay: 400ms; }
+
+/* Child Stagger Cascade for elements inside .reveal-on-scroll */
+.reveal-on-scroll .reveal-child {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-revealed .reveal-child {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 7. Floating Island Drop Animation on Page Entry */
+@keyframes islandDrop {
+  0% {
+    opacity: 0;
+    transform: translateY(-24px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-island-drop {
+  animation: islandDrop 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* 8. Cart Jiggle / Bounce on Product Add */
+@keyframes cartJiggle {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.22) rotate(-9deg);
+  }
+  50% {
+    transform: scale(1.18) rotate(7deg);
+  }
+  75% {
+    transform: scale(1.08) rotate(-4deg);
+  }
+}
+
+.animate-cart-bounce {
+  animation: cartJiggle 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* 9. Tactile Haptic Click Press */
+.active-haptic {
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.active-haptic:active {
+  transform: scale(0.95);
+}
+
+/* 10. Modal Spring Scale Entrance & Backdrop Fade */
+@keyframes modalScaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-modal-spring {
+  animation: modalScaleIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes modalFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn,
+.animate-fade-in {
+  animation: modalFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
 /* Reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
   .animate-marquee {
     animation-duration: 0s !important;
+  }
+  .reveal-on-scroll,
+  .reveal-scale,
+  .reveal-child {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
   * {
     animation-duration: 0.01ms !important;

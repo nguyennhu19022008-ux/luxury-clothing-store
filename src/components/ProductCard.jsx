@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Eye, ShoppingBag } from 'lucide-react';
 import { useStore, formatVND } from '../context/StoreContext';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
-export const ProductCard = ({ product, onQuickView, onQuickOrder }) => {
+export const ProductCard = ({ product, index = 0, onQuickView, onQuickOrder }) => {
   let store = null;
   try {
     store = useStore();
@@ -45,8 +46,11 @@ export const ProductCard = ({ product, onQuickView, onQuickOrder }) => {
     }
   };
 
+  const cardRef = useScrollReveal({ threshold: 0.08 });
+  const staggerClass = `stagger-${(index % 4) + 1}`;
+
   return (
-    <article className="group flex flex-col bg-luxury-bone border border-luxury-sand/80 hover:border-luxury-dark/80 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1 rounded-2xl overflow-hidden p-2.5">
+    <article ref={cardRef} className={`reveal-on-scroll ${staggerClass} group flex flex-col bg-luxury-bone border border-luxury-sand/80 hover:border-luxury-dark/80 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1 rounded-2xl overflow-hidden p-2.5`}>
       
       {/* Visual Frame with Satin Sheen Sweep in 16:9 Widescreen (Double-Bezel Inner Core) */}
       <div className="relative aspect-[16/9] w-full rounded-xl overflow-hidden bg-luxury-ivory satin-sheen-box shadow-[inset_0_1px_1px_rgba(255,255,255,0.3)]">
@@ -76,7 +80,7 @@ export const ProductCard = ({ product, onQuickView, onQuickOrder }) => {
           <button
             type="button"
             onClick={handleQuickViewClick}
-            className="flex-1 py-2 px-3 bg-luxury-bone/95 hover:bg-luxury-bone text-luxury-dark backdrop-blur-md text-xs font-semibold uppercase tracking-wider border border-luxury-sand rounded-full flex items-center justify-center gap-1.5 shadow-md active:scale-95 transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-luxury-dark cursor-pointer"
+            className="flex-1 py-2 px-3 bg-luxury-bone/95 hover:bg-luxury-bone text-luxury-dark backdrop-blur-md text-xs font-semibold uppercase tracking-wider border border-luxury-sand rounded-full flex items-center justify-center gap-1.5 shadow-md active:scale-95 active-haptic transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-luxury-dark cursor-pointer"
             title="Xem chi tiết thiết kế"
           >
             <Eye className="w-3.5 h-3.5" />
@@ -86,7 +90,7 @@ export const ProductCard = ({ product, onQuickView, onQuickOrder }) => {
           <button
             type="button"
             onClick={handleQuickOrderClick}
-            className="flex-1 py-2 px-3 bg-luxury-dark hover:bg-neutral-800 text-luxury-bone text-xs font-semibold uppercase tracking-wider rounded-full flex items-center justify-center gap-1.5 shadow-md active:scale-95 transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-luxury-dark cursor-pointer"
+            className="flex-1 py-2 px-3 bg-luxury-dark hover:bg-neutral-800 text-luxury-bone text-xs font-semibold uppercase tracking-wider rounded-full flex items-center justify-center gap-1.5 shadow-md active:scale-95 active-haptic transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-luxury-dark cursor-pointer"
             title="Mua ngay tác phẩm"
           >
             <ShoppingBag className="w-3.5 h-3.5" />

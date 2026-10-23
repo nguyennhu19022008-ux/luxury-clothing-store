@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowUpRight, ArrowRight } from 'lucide-react';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const CATEGORY_ITEMS = [
   {
@@ -46,17 +47,22 @@ const CATEGORY_ITEMS = [
 
 export const CategoryShowcase = ({ onSelectCategory }) => {
   const [activeId, setActiveId] = useState('ao-khoac');
+  const [isTransitioning, setIsTransitioning] = useState(false);
   const activeItem = CATEGORY_ITEMS.find((c) => c.id === activeId) || CATEGORY_ITEMS[0];
+  const sectionRef = useScrollReveal({ threshold: 0.1 });
 
   const handleChoose = (id) => {
+    if (id === activeId) return;
+    setIsTransitioning(true);
     setActiveId(id);
     if (typeof onSelectCategory === 'function') {
       onSelectCategory(id);
     }
+    setTimeout(() => setIsTransitioning(false), 250);
   };
 
   return (
-    <section id="categories" className="py-20 lg:py-28 bg-luxury-bone border-b border-luxury-sand scroll-mt-20">
+    <section ref={sectionRef} id="categories" className="reveal-on-scroll py-20 lg:py-28 bg-luxury-bone border-b border-luxury-sand scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header with text-balance and text-pretty */}
@@ -87,7 +93,7 @@ export const CategoryShowcase = ({ onSelectCategory }) => {
                     key={item.id}
                     type="button"
                     onClick={() => handleChoose(item.id)}
-                    className={`w-full p-4 text-left transition-all duration-300 border flex items-center justify-between cursor-pointer ${
+                    className={`reveal-child stagger-${idx + 1} w-full p-4 text-left transition-all duration-300 border flex items-center justify-between cursor-pointer ${
                       isActive
                         ? 'bg-luxury-ivory border-luxury-dark shadow-sm translate-x-1'
                         : 'bg-transparent border-luxury-sand hover:border-luxury-dark/60 hover:bg-luxury-ivory/50'
@@ -141,7 +147,9 @@ export const CategoryShowcase = ({ onSelectCategory }) => {
               src={activeItem.image}
               alt={activeItem.title}
               key={activeItem.id}
-              className="w-full h-full object-cover object-center transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
+              className={`w-full h-full object-cover object-center transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105 ${
+                isTransitioning ? 'opacity-40 scale-[0.98]' : 'opacity-100 scale-100'
+              }`}
               loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />

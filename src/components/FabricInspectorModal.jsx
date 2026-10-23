@@ -52,7 +52,7 @@ export const FabricInspectorModal = ({ isOpen, onClose }) => {
       />
 
       {/* Double-Bezel Modal Container */}
-      <div className="relative w-full max-w-5xl bg-luxury-bone/95 backdrop-blur-2xl border border-luxury-sand/80 shadow-2xl rounded-3xl p-6 sm:p-8 lg:p-10 z-10 animate-fadeUp overflow-hidden">
+      <div className="relative w-full max-w-5xl bg-luxury-bone/95 backdrop-blur-2xl border border-luxury-sand/80 shadow-2xl rounded-3xl p-6 sm:p-8 lg:p-10 z-10 animate-modal-spring overflow-hidden">
         
         {/* Header */}
         <div className="flex items-center justify-between pb-6 border-b border-luxury-sand">

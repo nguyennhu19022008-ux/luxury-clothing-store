@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { CATEGORIES, PRODUCTS } from '../data/products';
 import { ProductCard } from './ProductCard';
 import { SlidersHorizontal, Quote, Sparkles } from 'lucide-react';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 export const MagazineLookbookGrid = ({
   selectedCategory = 'all',
@@ -11,6 +12,8 @@ export const MagazineLookbookGrid = ({
 }) => {
   const [activeTab, setActiveTab] = useState(selectedCategory || 'all');
   const [sortBy, setSortBy] = useState('featured');
+  const headerRef = useScrollReveal({ threshold: 0.1 });
+  const lookbookRef = useScrollReveal({ threshold: 0.1 });
 
   const handleTabChange = (catId) => {
     setActiveTab(catId);
@@ -34,7 +37,7 @@ export const MagazineLookbookGrid = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header with text-balance and text-pretty */}
-        <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-14">
+        <div ref={headerRef} className="reveal-on-scroll flex flex-col items-center text-center max-w-3xl mx-auto mb-14">
           <div className="flex items-center gap-2 mb-3">
             <span className="w-4 h-[1px] bg-luxury-gold inline-block" />
             <span className="text-[11px] font-semibold tracking-[0.25em] text-luxury-gold uppercase">
@@ -96,10 +99,11 @@ export const MagazineLookbookGrid = ({
 
         {/* Products Grid: 2-Column Wide Editorial Magazine Spread */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-          {filteredProducts.map((product) => (
+          {filteredProducts.map((product, idx) => (
             <ProductCard
               key={product.id}
               product={product}
+              index={idx}
               onQuickView={onQuickView}
               onQuickOrder={onQuickOrder}
             />
@@ -109,7 +113,7 @@ export const MagazineLookbookGrid = ({
         {/* ============================================================ */}
         {/* EDITORIAL SPREAD INTERLUDE: BALANCED 2-COLUMN 16:9 SPLIT     */}
         {/* ============================================================ */}
-        <div id="lookbook" className="mt-24 pt-20 border-t border-luxury-sand scroll-mt-20">
+        <div ref={lookbookRef} id="lookbook" className="reveal-on-scroll mt-24 pt-20 border-t border-luxury-sand scroll-mt-20">
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             

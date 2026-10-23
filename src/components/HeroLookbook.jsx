@@ -4,6 +4,19 @@ import { ArrowRight, Sparkles, Compass } from 'lucide-react';
 export const HeroLookbook = ({ onExploreClick, onOpenFabricInspector }) => {
   return (
     <section className="relative w-full min-h-[calc(100vh-72px)] flex items-center bg-luxury-bone overflow-hidden border-b border-luxury-sand">
+      {/* 2XL & Widescreen Flank Editorial Coordinates (Eliminates wide-screen empty flank feel on 1440px+) */}
+      <div className="hidden min-[1400px]:flex 2xl:flex absolute left-6 2xl:left-8 top-1/2 -translate-y-1/2 flex-col items-center gap-8 text-[10px] font-mono tracking-[0.3em] uppercase text-luxury-sand select-none pointer-events-none [writing-mode:vertical-rl] rotate-180">
+        <span>HAUTE COUTURE /// N° 01</span>
+        <span className="w-8 h-[1px] bg-luxury-sand/80" />
+        <span>PARIS — HANOI</span>
+      </div>
+
+      <div className="hidden min-[1400px]:flex 2xl:flex absolute right-6 2xl:right-8 top-1/2 -translate-y-1/2 flex-col items-center gap-8 text-[10px] font-mono tracking-[0.3em] uppercase text-luxury-sand select-none pointer-events-none [writing-mode:vertical-rl]">
+        <span>AUTOMNE — HIVER 2026</span>
+        <span className="w-8 h-[1px] bg-luxury-sand/80" />
+        <span>EDITION LIMITÉE</span>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
           
@@ -23,7 +36,7 @@ export const HeroLookbook = ({ onExploreClick, onOpenFabricInspector }) => {
                 <button
                   type="button"
                   onClick={onOpenFabricInspector}
-                  className="inline-flex items-center gap-1.5 px-3 py-0.5 bg-luxury-ivory hover:bg-luxury-dark text-luxury-muted hover:text-luxury-bone border border-luxury-sand text-[10px] font-mono tracking-wider uppercase rounded-full transition-all cursor-pointer shadow-sm"
+                  className="inline-flex items-center gap-1.5 px-3 py-0.5 bg-luxury-ivory hover:bg-luxury-dark text-luxury-muted hover:text-luxury-bone border border-luxury-sand text-[10px] font-mono tracking-wider uppercase rounded-full transition-all cursor-pointer shadow-sm active:scale-95"
                   title="Soi kính lúp cấu trúc sợi len Cashmere và lụa tơ tằm"
                 >
                   <Sparkles className="w-3 h-3 text-luxury-gold" />
@@ -32,9 +45,9 @@ export const HeroLookbook = ({ onExploreClick, onOpenFabricInspector }) => {
               )}
             </div>
 
-            {/* Monumental Headline with text-balance */}
-            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-normal tracking-tight text-luxury-dark leading-[1.12] text-balance descender-safe">
-              Bản Hòa Ca Của Tinh Giản &amp; May Đo Thượng Tuyển
+            {/* Monumental Headline with text-balance and non-breaking space for compound word */}
+            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-normal tracking-tight text-luxury-dark leading-[1.14] text-balance descender-safe">
+              Bản Hòa Ca Của Tinh Giản <br className="hidden sm:inline" /> &amp; May&nbsp;Đo Thượng Tuyển
             </h1>
 
             {/* Editorial Subtext with text-pretty and optimal character container */}
@@ -66,33 +79,32 @@ export const HeroLookbook = ({ onExploreClick, onOpenFabricInspector }) => {
               </a>
             </div>
 
-            {/* Material Credentials Badge */}
-            <div className="pt-4 border-t border-luxury-sand/80 flex flex-wrap items-center gap-6 text-xs text-luxury-muted font-sans">
-              <div className="flex items-center gap-2">
-                <Sparkles className="w-3.5 h-3.5 text-luxury-gold" />
+            {/* Material Credentials Row with inline flow */}
+            <div className="pt-5 border-t border-luxury-sand/80 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-luxury-muted font-sans">
+              <span className="flex items-center gap-2">
+                <Sparkles className="w-3.5 h-3.5 text-luxury-gold shrink-0" />
                 <span>100% Cashmere &amp; Mulberry Silk</span>
-              </div>
-              <span className="text-luxury-sand">•</span>
-              <div>
-                <span>Handmade in Atelier Hà Đông</span>
-              </div>
-              <span className="text-luxury-sand">•</span>
-              <div>
-                <span>Thử đồ tại gia độc quyền</span>
-              </div>
+              </span>
+              <span className="text-luxury-sand hidden sm:inline">•</span>
+              <span>Handmade in Atelier Hà Đông</span>
+              <span className="text-luxury-sand hidden sm:inline">•</span>
+              <span>Dịch vụ thử đồ tại gia độc quyền</span>
             </div>
 
           </div>
 
-          {/* Right: Double-Bezel 16:9 Widescreen Monumental Lookbook Image */}
+          {/* Right: Double-Bezel 16:9 Widescreen Monumental Lookbook Image with Layered Composition */}
           <div className="relative flex justify-center items-center w-full">
             
             {/* Ambient Champagne Gold Glowing Aura */}
             <div className="absolute -top-16 -right-16 w-80 h-80 rounded-full bg-luxury-gold/15 blur-3xl pointer-events-none animate-luxury-aura" />
             <div className="absolute -bottom-10 -left-10 w-72 h-72 rounded-full bg-luxury-sand/30 blur-2xl pointer-events-none animate-luxury-aura" style={{ animationDelay: '-5s' }} />
 
+            {/* Offset Architectural Backplate for Layered Depth */}
+            <div className="absolute -inset-2 sm:-inset-3 bg-luxury-ivory/70 border border-luxury-sand/80 rounded-3xl -rotate-1 pointer-events-none shadow-md hidden sm:block" />
+
             {/* Double-Bezel Outer Shell */}
-            <div className="p-2.5 sm:p-3 bg-luxury-ivory/80 rounded-3xl border border-luxury-sand/80 shadow-2xl backdrop-blur-sm w-full">
+            <div className="relative p-2.5 sm:p-3 bg-luxury-bone/90 sm:bg-luxury-ivory/90 rounded-3xl border border-luxury-sand/80 shadow-2xl backdrop-blur-sm w-full">
               
               {/* Inner Core in 16:9 Widescreen */}
               <div className="relative w-full aspect-[16/9] rounded-[calc(1.5rem-0.625rem)] overflow-hidden bg-neutral-900 satin-sheen-box group shadow-[inset_0_1px_1px_rgba(255,255,255,0.3)]">
@@ -100,7 +112,7 @@ export const HeroLookbook = ({ onExploreClick, onOpenFabricInspector }) => {
                 <img
                   src="https://images.unsplash.com/photo-1539533018447-63fcce2678e3?q=80&w=1200&auto=format&fit=crop"
                   alt="Maison Vuonggia Look 01 - Măng tô Cashmere May đo"
-                  className="w-full h-full object-cover object-[center_28%] transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
+                  className="w-full h-full object-cover object-[center_28%] sm:object-[center_20%] transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
                   loading="eager"
                 />
 
@@ -122,6 +134,14 @@ export const HeroLookbook = ({ onExploreClick, onOpenFabricInspector }) => {
                   </div>
                 </div>
 
+              </div>
+
+              {/* Floating Fabric Swatch Pill */}
+              <div className="absolute -bottom-3 -right-2 sm:-bottom-4 sm:-right-3 bg-luxury-bone/95 border border-luxury-sand/90 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-2 z-20">
+                <span className="w-2 h-2 rounded-full bg-luxury-gold animate-pulse" />
+                <span className="text-[10px] sm:text-[10.5px] font-mono tracking-wider text-luxury-dark font-medium uppercase">
+                  100% Cashmere Mông Cổ · 14.5μm
+                </span>
               </div>
             </div>
 

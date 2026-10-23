@@ -1,8 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { ShoppingBag, Search, ShieldCheck, Menu, X, ArrowUpRight } from 'lucide-react';
 
 export const Header = ({ onGoToPage0, cartCount = 0, onOpenCart, onOpenSearch }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [cartBouncing, setCartBouncing] = useState(false);
+  const prevCountRef = useRef(cartCount);
+
+  useEffect(() => {
+    if (cartCount > prevCountRef.current) {
+      setCartBouncing(true);
+      const timer = setTimeout(() => setCartBouncing(false), 700);
+      prevCountRef.current = cartCount;
+      return () => clearTimeout(timer);
+    }
+    prevCountRef.current = cartCount;
+  }, [cartCount]);
 
   const navLinks = [
     { label: 'Bộ Sưu Tập Mới', href: '#collection' },
@@ -34,7 +46,7 @@ export const Header = ({ onGoToPage0, cartCount = 0, onOpenCart, onOpenSearch })
         </div>
       </div>
 
-      <header className="sticky top-0 z-40 w-full bg-luxury-bone/90 backdrop-blur-xl border-b border-luxury-sand transition-all">
+      <header className="sticky top-0 z-40 w-full bg-luxury-bone/90 backdrop-blur-xl border-b border-luxury-sand transition-all animate-island-drop">
         <div className="max-w-7xl h-[72px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         
         {/* Left: Brand Identity */}
@@ -90,13 +102,13 @@ export const Header = ({ onGoToPage0, cartCount = 0, onOpenCart, onOpenSearch })
           {/* Cart Trigger */}
           <button
             onClick={onOpenCart}
-            className="p-2 text-luxury-dark hover:text-luxury-muted transition-colors relative rounded-none focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-luxury-dark"
+            className={`p-2 text-luxury-dark hover:text-luxury-muted transition-colors relative rounded-none focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-luxury-dark active:scale-95 ${cartBouncing ? 'animate-cart-bounce' : ''}`}
             title="Xem giỏ hàng"
             aria-label="Mở giỏ hàng"
           >
             <ShoppingBag className="w-5 h-5 stroke-[1.5]" />
             {cartCount > 0 && (
-              <span className="absolute top-1 right-1 w-4 h-4 bg-luxury-dark text-luxury-bone text-[9px] font-bold rounded-full flex items-center justify-center animate-pulse">
+              <span className={`absolute top-1 right-1 w-4 h-4 bg-luxury-dark text-luxury-bone text-[9px] font-bold rounded-full flex items-center justify-center ${cartBouncing ? 'animate-cart-bounce' : 'animate-pulse'}`}>
                 {cartCount}
               </span>
             )}

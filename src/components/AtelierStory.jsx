@@ -1,7 +1,11 @@
 import React from 'react';
 import { Scissors, Layers, Sparkles, Shield, Clock, HeartHandshake } from 'lucide-react';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 export const AtelierStory = () => {
+  const photoRef = useScrollReveal({ threshold: 0.15 });
+  const storyRef = useScrollReveal({ threshold: 0.15 });
+
   const pillars = [
     {
       icon: Scissors,
@@ -33,7 +37,7 @@ export const AtelierStory = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
           
           {/* Left: 16:9 Widescreen Artisan Photography with Double-Bezel */}
-          <div className="relative w-full">
+          <div ref={photoRef} className="reveal-scale relative w-full">
             <div className="p-2.5 sm:p-3 bg-luxury-bone/80 rounded-3xl border border-luxury-sand/80 shadow-2xl">
               <div className="aspect-[16/9] bg-neutral-900 rounded-[calc(1.5rem-0.625rem)] overflow-hidden relative shadow-[inset_0_1px_1px_rgba(255,255,255,0.3)] satin-sheen-box group">
                 <img
@@ -56,7 +60,7 @@ export const AtelierStory = () => {
           </div>
 
           {/* Right: The Atelier Manifesto & 4 Pillars */}
-          <div className="flex flex-col justify-center space-y-6">
+          <div ref={storyRef} className="reveal-on-scroll flex flex-col justify-center space-y-6">
             
             <div className="flex items-center gap-2">
               <span className="w-6 h-[1.5px] bg-luxury-gold inline-block" />
@@ -78,7 +82,7 @@ export const AtelierStory = () => {
               {pillars.map((pillar, i) => {
                 const IconComponent = pillar.icon;
                 return (
-                  <div key={i} className="flex flex-col space-y-2">
+                  <div key={i} className={`reveal-child stagger-${i + 1} flex flex-col space-y-2`}>
                     <div className="flex items-center gap-2 text-luxury-dark">
                       <IconComponent className="w-4 h-4 text-luxury-gold stroke-[1.75]" />
                       <h3 className="font-serif text-base text-luxury-dark font-semibold text-balance">

@@ -83,7 +83,7 @@ export const QuickViewModal = () => {
       aria-labelledby="quick-view-title"
     >
       <div
-        className="relative w-full max-w-4xl max-h-[90vh] bg-luxury-bone border border-luxury-sand shadow-2xl flex flex-col lg:flex-row overflow-hidden animate-scaleUp"
+        className="relative w-full max-w-4xl max-h-[90vh] bg-luxury-bone border border-luxury-sand shadow-2xl flex flex-col lg:flex-row overflow-hidden animate-modal-spring"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button [X] */}
