@@ -60,10 +60,10 @@ export const ProductCard = ({
   return (
     <article
       ref={cardRef}
-      className={`${animationRevealClass} ${staggerClass} elastic-haptic group flex flex-col ${
+      className={`${animationRevealClass} ${staggerClass} elastic-haptic group flex flex-col max-w-[480px] sm:max-w-[520px] lg:max-w-[560px] xl:max-w-[580px] ${
         isSpotlight
-          ? 'max-w-[760px] lg:max-w-4xl xl:max-w-5xl 2xl:max-w-6xl bg-gradient-to-br from-luxury-ivory via-luxury-bone to-[#EFE9DF] border-2 border-luxury-gold/60 shadow-2xl p-3 sm:p-4'
-          : 'max-w-[480px] sm:max-w-[520px] lg:max-w-[560px] xl:max-w-[580px] bg-luxury-bone border border-luxury-sand/80 hover:border-luxury-dark/80 hover:shadow-2xl p-2 sm:p-2.5 lg:p-3'
+          ? 'bg-gradient-to-br from-luxury-ivory via-luxury-bone to-[#EFE9DF] border-2 border-luxury-gold/60 shadow-xl p-2 sm:p-2.5 lg:p-3 /* max-w-[760px] xl:max-w-5xl 2xl:max-w-6xl */'
+          : 'bg-luxury-bone border border-luxury-sand/80 hover:border-luxury-dark/80 hover:shadow-2xl p-2 sm:p-2.5 lg:p-3'
       } w-full mx-auto transition-all duration-500 transform hover:-translate-y-1 rounded-none overflow-hidden`}
     >
       

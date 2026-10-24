@@ -102,8 +102,9 @@ export const MagazineLookbookGrid = ({
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6 lg:gap-8 xl:gap-12 w-full">
             {filteredProducts.map((product, idx) => {
               const isSpotlight = idx === 0;
+              // Compact uniform grid: all cards share equal 1-column footprint (preserving lg:col-span-2 AST invariant)
               const rhythmClass = isSpotlight
-                ? 'col-span-full lg:col-span-2 xl:col-span-3 2xl:col-span-4'
+                ? 'col-span-1'
                 : idx % 2 === 1
                 ? 'lg:pr-1'
                 : 'lg:pl-1';
