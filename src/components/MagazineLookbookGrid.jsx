@@ -106,12 +106,21 @@ export const MagazineLookbookGrid = ({
               : idx % 2 === 1
               ? 'lg:pr-1'
               : 'lg:pl-1';
+
+            // Lateral converging reveal: Left column slides from left, Right column slides from right
+            const revealClass = isSpotlight
+              ? 'reveal-scale'
+              : idx % 2 === 1
+              ? 'reveal-slide-left'
+              : 'reveal-slide-right';
+
             return (
-              <div key={product.id} className={rhythmClass}>
+              <div key={product.id} className={`${rhythmClass} flex justify-center w-full`}>
                 <ProductCard
                   product={product}
                   index={idx}
                   isSpotlight={isSpotlight}
+                  revealClass={revealClass}
                   onQuickView={onQuickView}
                   onQuickOrder={onQuickOrder}
                 />
@@ -127,8 +136,8 @@ export const MagazineLookbookGrid = ({
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             
-            {/* Left Visual: 16:9 Widescreen Lookbook Visual */}
-            <div className="relative bg-luxury-ivory border border-luxury-sand overflow-hidden aspect-[16/9] group shadow-xl satin-sheen-box">
+            {/* Left Visual: 16:9 Widescreen Lookbook Visual - slides from left */}
+            <div className="reveal-slide-left relative bg-luxury-ivory border border-luxury-sand overflow-hidden aspect-[16/9] group shadow-xl satin-sheen-box">
               <img
                 src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?q=80&w=1200&auto=format&fit=crop"
                 alt="Editorial Look 02 - Đầm Lụa Tơ Tằm"
@@ -140,8 +149,8 @@ export const MagazineLookbookGrid = ({
               </div>
             </div>
 
-            {/* Right Column: 16:9 Macro Texture Shot + Manifesto Quote */}
-            <div className="flex flex-col justify-between space-y-6">
+            {/* Right Column: 16:9 Macro Texture Shot + Manifesto Quote - slides from right */}
+            <div className="reveal-slide-right flex flex-col justify-between space-y-6">
               
               {/* Texture Macro Shot in 16:9 */}
               <div className="relative aspect-[16/9] w-full bg-neutral-200 border border-luxury-sand overflow-hidden shadow-sm satin-sheen-box">

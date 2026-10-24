@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-24T01:19:12.132Z",
+  "timestamp": "2026-10-24T03:28:41.905Z",
   "environment": {
     "nodeVersion": "v24.19.0",
     "platform": "win32",
@@ -9,7 +9,7 @@
     "total": 129,
     "passed": 129,
     "failed": 0,
-    "durationMs": 42,
+    "durationMs": 62,
     "successRate": "100.00%"
   },
   "tiers": [
@@ -18,7 +18,7 @@
       "total": 93,
       "passed": 93,
       "failed": 0,
-      "duration": 31,
+      "duration": 49,
       "results": [
         {
           "suite": "Feature 1: Slide 0 OLED Cover (Page0_Copyright)",
@@ -132,7 +132,7 @@
           "suite": "Feature 4: 1-Click Contact Copy Utility",
           "test": "4.1 Official Email is verbatim nguyennhu19022008@gmail.com",
           "passed": true,
-          "duration": 0
+          "duration": 1
         },
         {
           "suite": "Feature 4: 1-Click Contact Copy Utility",
@@ -204,13 +204,13 @@
           "suite": "Feature 6: Editorial Header & Navigation",
           "test": "6.1 Header file exists in components directory",
           "passed": true,
-          "duration": 0
+          "duration": 1
         },
         {
           "suite": "Feature 6: Editorial Header & Navigation",
           "test": "6.2 Brand logo displays VUONGGIA with luxury typography styling",
           "passed": true,
-          "duration": 1
+          "duration": 0
         },
         {
           "suite": "Feature 6: Editorial Header & Navigation",
@@ -252,7 +252,7 @@
           "suite": "Feature 7: Asymmetrical Hero Lookbook",
           "test": "7.3 Editorial campaign narrative headline is present",
           "passed": true,
-          "duration": 1
+          "duration": 0
         },
         {
           "suite": "Feature 7: Asymmetrical Hero Lookbook",
@@ -336,13 +336,13 @@
           "suite": "Feature 9: Magazine Lookbook Grid & Product Catalog",
           "test": "9.5 ProductCard provides Quick View and Buy Now triggers",
           "passed": true,
-          "duration": 1
+          "duration": 0
         },
         {
           "suite": "Feature 9: Magazine Lookbook Grid & Product Catalog",
           "test": "9.6 Price formatting in Vietnamese Dong (VND)",
           "passed": true,
-          "duration": 15
+          "duration": 25
         },
         {
           "suite": "Feature 10: Quick View Modal",
@@ -360,7 +360,7 @@
           "suite": "Feature 10: Quick View Modal",
           "test": "10.3 Quick View supports instantaneous \"Mua ngay\" transition",
           "passed": true,
-          "duration": 1
+          "duration": 0
         },
         {
           "suite": "Feature 10: Quick View Modal",
@@ -384,7 +384,7 @@
           "suite": "Feature 11: Quick Cart Drawer",
           "test": "11.1 Adding item to cart updates total count and subtotal",
           "passed": true,
-          "duration": 0
+          "duration": 1
         },
         {
           "suite": "Feature 11: Quick Cart Drawer",
@@ -474,7 +474,7 @@
           "suite": "Feature 13: Mock Payment Methods & Royal Confirmation Receipt",
           "test": "13.4 Generates official Order ID conforming to VG-2026-XXXX format",
           "passed": true,
-          "duration": 1
+          "duration": 0
         },
         {
           "suite": "Feature 13: Mock Payment Methods & Royal Confirmation Receipt",
@@ -492,7 +492,7 @@
           "suite": "Feature 14: R1 Direct Storefront Entry & Fullscreen Copyright Modal",
           "test": "14.1 App initializes directly into Storefront (useState(1))",
           "passed": true,
-          "duration": 0
+          "duration": 1
         },
         {
           "suite": "Feature 14: R1 Direct Storefront Entry & Fullscreen Copyright Modal",
@@ -585,7 +585,7 @@
       "total": 22,
       "passed": 22,
       "failed": 0,
-      "duration": 2,
+      "duration": 5,
       "results": [
         {
           "suite": "Group 1: Slide 0 State & Event Boundaries",
@@ -597,7 +597,7 @@
           "suite": "Group 1: Slide 0 State & Event Boundaries",
           "test": "B1.2 Repeated Escape key presses cleanly alternate card visibility",
           "passed": true,
-          "duration": 0
+          "duration": 1
         },
         {
           "suite": "Group 1: Slide 0 State & Event Boundaries",
@@ -633,7 +633,7 @@
           "suite": "Group 2: Cart Quantities & Empty State Boundaries",
           "test": "B2.4 Adding item with zero or negative quantity is safely ignored",
           "passed": true,
-          "duration": 0
+          "duration": 1
         },
         {
           "suite": "Group 2: Cart Quantities & Empty State Boundaries",
@@ -663,7 +663,7 @@
           "suite": "Group 3: Phone Number Validation Boundary Matrix",
           "test": "B3.4 Malformed, alphabetic, or out-of-bounds phone numbers are rejected",
           "passed": true,
-          "duration": 0
+          "duration": 1
         },
         {
           "suite": "Group 4: Coupon Code Robustness & Precision",
@@ -750,7 +750,7 @@
           "suite": "Interaction 4: \"Mua Ngay\" Isolation vs Cart Checkout",
           "test": "I4.1 \"Mua ngay\" single item checkout does NOT wipe existing general cart items",
           "passed": true,
-          "duration": 0
+          "duration": 1
         },
         {
           "suite": "Interaction 4: \"Mua Ngay\" Isolation vs Cart Checkout",
@@ -780,7 +780,7 @@
           "suite": "Interaction 8: Sequential Orders Idempotency",
           "test": "I8.1 Successive orders generate distinct order identifiers",
           "passed": true,
-          "duration": 1
+          "duration": 0
         },
         {
           "suite": "Interaction 9: Multi-Quantity Cart Drawer Sync with Quick Order",
@@ -801,7 +801,7 @@
       "total": 3,
       "passed": 3,
       "failed": 0,
-      "duration": 0,
+      "duration": 1,
       "results": [
         {
           "suite": "Scenario A: The First-Time Luxury Connoisseur (Thùy Linh - Hà Nội)",

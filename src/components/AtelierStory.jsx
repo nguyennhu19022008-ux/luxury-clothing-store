@@ -48,8 +48,8 @@ export const AtelierStory = () => {
         {/* Narrative Split: Balanced 2-Column Split */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 xl:gap-20 items-center">
           
-          {/* Left: 16:9 Widescreen Artisan Photography with Double-Bezel Champagne Glow */}
-          <div ref={photoRef} className="reveal-scale relative w-full">
+          {/* Left: 16:9 Widescreen Artisan Photography with Double-Bezel Champagne Glow (Slides in from Left) */}
+          <div ref={photoRef} className="reveal-on-scroll reveal-slide-left relative w-full">
             <div className="p-2.5 sm:p-3 bg-neutral-900/90 rounded-none border border-luxury-gold/40 shadow-[0_0_50px_rgba(0,0,0,0.8)]">
               <div className="aspect-[16/9] bg-black rounded-none overflow-hidden relative shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)] satin-sheen-box group">
                 <img
@@ -71,8 +71,8 @@ export const AtelierStory = () => {
             </div>
           </div>
 
-          {/* Right: The Atelier Manifesto & 4 Black Stone Pillars */}
-          <div ref={storyRef} className="reveal-on-scroll flex flex-col justify-center space-y-6">
+          {/* Right: The Atelier Manifesto & 4 Black Stone Pillars (Slides in from Right) */}
+          <div ref={storyRef} className="reveal-on-scroll reveal-slide-right flex flex-col justify-center space-y-6">
             
             <div className="flex items-center gap-2">
               <span className="w-6 h-[1.5px] bg-luxury-gold inline-block" />

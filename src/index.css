@@ -226,6 +226,33 @@
   transform: scale(1) translateY(0);
 }
 
+/* Lateral Converging Scroll-Reveal Engine (Left & Right Inward Slides) */
+.reveal-slide-left {
+  opacity: 0;
+  transform: translateX(-40px) translateY(8px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-slide-left.is-revealed,
+.reveal-on-scroll.is-revealed .reveal-slide-left {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+
+.reveal-slide-right {
+  opacity: 0;
+  transform: translateX(40px) translateY(8px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-slide-right.is-revealed,
+.reveal-on-scroll.is-revealed .reveal-slide-right {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+
 /* Stagger Delays for Cascade Entrance */
 .stagger-1 { transition-delay: 80ms; }
 .stagger-2 { transition-delay: 160ms; }
@@ -429,6 +456,8 @@
   }
   .reveal-on-scroll,
   .reveal-scale,
+  .reveal-slide-left,
+  .reveal-slide-right,
   .reveal-child,
   .text-mask-wipe,
   .elastic-haptic {

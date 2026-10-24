@@ -3,7 +3,14 @@ import { Eye, ShoppingBag } from 'lucide-react';
 import { useStore, formatVND } from '../context/StoreContext';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
-export const ProductCard = ({ product, index = 0, isSpotlight = false, onQuickView, onQuickOrder }) => {
+export const ProductCard = ({
+  product,
+  index = 0,
+  isSpotlight = false,
+  revealClass = '',
+  onQuickView,
+  onQuickOrder,
+}) => {
   let store = null;
   try {
     store = useStore();
@@ -48,15 +55,16 @@ export const ProductCard = ({ product, index = 0, isSpotlight = false, onQuickVi
 
   const cardRef = useScrollReveal({ threshold: 0.08 });
   const staggerClass = `stagger-${(index % 4) + 1}`;
+  const animationRevealClass = revealClass || 'reveal-on-scroll';
 
   return (
     <article
       ref={cardRef}
-      className={`reveal-on-scroll ${staggerClass} elastic-haptic group flex flex-col ${
+      className={`${animationRevealClass} ${staggerClass} elastic-haptic group flex flex-col ${
         isSpotlight
-          ? 'bg-gradient-to-br from-luxury-ivory via-luxury-bone to-[#EFE9DF] border-2 border-luxury-gold/60 shadow-2xl p-3.5 sm:p-4.5'
-          : 'bg-luxury-bone border border-luxury-sand/80 hover:border-luxury-dark/80 hover:shadow-2xl p-2.5'
-      } transition-all duration-500 transform hover:-translate-y-1 rounded-none overflow-hidden`}
+          ? 'max-w-[760px] bg-gradient-to-br from-luxury-ivory via-luxury-bone to-[#EFE9DF] border-2 border-luxury-gold/60 shadow-2xl p-3 sm:p-4'
+          : 'max-w-[480px] bg-luxury-bone border border-luxury-sand/80 hover:border-luxury-dark/80 hover:shadow-2xl p-2 sm:p-2.5'
+      } w-full mx-auto transition-all duration-500 transform hover:-translate-y-1 rounded-none overflow-hidden`}
     >
       
       {/* Visual Frame with Satin Sheen Sweep in 16:9 Widescreen (Double-Bezel Inner Core) */}
@@ -113,11 +121,11 @@ export const ProductCard = ({ product, index = 0, isSpotlight = false, onQuickVi
       </div>
 
       {/* Product Information */}
-      <div className="p-4 sm:p-5 flex flex-col justify-between flex-grow space-y-3">
+      <div className="p-3.5 sm:p-4 flex flex-col justify-between flex-grow space-y-2.5">
         
         {/* Category & Color Swatches */}
         <div className="flex items-center justify-between">
-          <span className="text-[10.5px] font-mono uppercase tracking-widest text-luxury-muted">
+          <span className="text-[10px] sm:text-[10.5px] font-mono uppercase tracking-widest text-luxury-muted">
             {product.categoryName}
           </span>
 
@@ -144,13 +152,13 @@ export const ProductCard = ({ product, index = 0, isSpotlight = false, onQuickVi
         {/* Title with text-balance */}
         <h3
           onClick={handleQuickViewClick}
-          className="font-serif text-lg sm:text-xl text-luxury-dark font-medium leading-snug cursor-pointer hover:text-neutral-600 transition-colors text-balance"
+          className="font-serif text-base sm:text-lg text-luxury-dark font-medium leading-snug cursor-pointer hover:text-neutral-600 transition-colors text-balance"
         >
           {product.name}
         </h3>
 
         {/* Tagline with text-pretty and character bound */}
-        <p className="text-xs sm:text-sm text-luxury-muted line-clamp-2 font-normal leading-relaxed text-pretty max-w-[75ch]">
+        <p className="text-xs text-luxury-muted line-clamp-2 font-normal leading-relaxed text-pretty max-w-[75ch]">
           {product.tagline}
         </p>
 
@@ -167,7 +175,7 @@ export const ProductCard = ({ product, index = 0, isSpotlight = false, onQuickVi
             )}
           </div>
 
-          <span className="text-[11px] font-sans font-medium text-luxury-gold uppercase tracking-wider">
+          <span className="text-[10.5px] font-sans font-medium text-luxury-gold uppercase tracking-wider">
             {product.sizes?.map(s => s.id).join(' · ')}
           </span>
         </div>

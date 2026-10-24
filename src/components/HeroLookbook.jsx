@@ -20,8 +20,8 @@ export const HeroLookbook = ({ onExploreClick, onOpenFabricInspector }) => {
       <div className="w-full max-w-none px-6 sm:px-12 lg:px-16 xl:px-24 2xl:px-32 py-12 lg:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 lg:[grid-template-columns:3fr_2fr] gap-10 lg:gap-16 xl:gap-20 items-center">
           
-          {/* Left: Asymmetric 60/40 Editorial Narrative & Haute Couture CTAs */}
-          <div className="flex flex-col justify-center space-y-6 lg:space-y-8 z-10 lg:pr-6 xl:pr-10">
+          {/* Left: Asymmetric 60/40 Editorial Narrative & Haute Couture CTAs (Slides in from Left) */}
+          <div className="reveal-slide-left is-revealed flex flex-col justify-center space-y-6 lg:space-y-8 z-10 lg:pr-6 xl:pr-10">
             
             {/* Eyebrow Label with Fabric Inspector Trigger */}
             <div className="flex flex-wrap items-center gap-3">
@@ -95,8 +95,8 @@ export const HeroLookbook = ({ onExploreClick, onOpenFabricInspector }) => {
 
           </div>
 
-          {/* Right: Double-Bezel 16:9 Widescreen Monumental Lookbook Image with Layered Composition */}
-          <div className="relative flex justify-center items-center w-full">
+          {/* Right: Double-Bezel 16:9 Widescreen Monumental Lookbook Image (Slides in from Right) */}
+          <div className="reveal-slide-right is-revealed relative flex justify-center items-center w-full">
             
             {/* Ambient Champagne Gold Glowing Aura */}
             <div className="absolute -top-16 -right-16 w-80 h-80 rounded-full bg-luxury-gold/15 blur-3xl pointer-events-none animate-luxury-aura" />

@@ -83,8 +83,8 @@ export const CategoryShowcase = ({ onSelectCategory }) => {
         {/* Asymmetrical Bento Split: Master Switcher on Left, 16:9 Showcase Frame on Right */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 xl:gap-18 items-center">
           
-          {/* Left Column: Interactive Asymmetric Category Switcher & Details */}
-          <div className="flex flex-col space-y-4">
+          {/* Left Column: Interactive Asymmetric Category Switcher & Details (Slides in from Left) */}
+          <div className="reveal-slide-left flex flex-col space-y-4">
             <div className="space-y-3">
               {CATEGORY_ITEMS.map((item, idx) => {
                 const isActive = item.id === activeId;
@@ -148,8 +148,8 @@ export const CategoryShowcase = ({ onSelectCategory }) => {
             </div>
           </div>
 
-          {/* Right Column: 16:9 Master Showcase Frame & Interactive Filmstrip Carousel */}
-          <div className="flex flex-col space-y-4">
+          {/* Right Column: 16:9 Master Showcase Frame & Interactive Filmstrip Carousel (Slides in from Right) */}
+          <div className="reveal-slide-right flex flex-col space-y-4">
             {/* Master 16:9 Showcase Frame */}
             <div className="relative w-full aspect-[16/9] bg-luxury-ivory border border-[#D8D0C3] rounded-none overflow-hidden shadow-2xl satin-sheen-box group">
               <img
