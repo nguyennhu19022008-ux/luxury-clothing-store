@@ -55,8 +55,8 @@ export const MagazineLookbookGrid = ({
           </p>
         </div>
 
-        {/* Category Filter Tabs & Sorting Toolbar */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 sm:mb-8 pb-3 border-b border-luxury-sand max-w-[1040px] mx-auto w-full">
+        {/* Category Filter Tabs & Sorting Toolbar - Full Bleed */}
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 sm:mb-10 pb-3 border-b border-luxury-sand w-full">
           
           {/* Tabs */}
           <div className="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-none" role="tablist">
@@ -97,9 +97,9 @@ export const MagazineLookbookGrid = ({
 
         </div>
 
-        {/* Products Grid: 2-Column Wide Editorial Magazine Spread with Spotlight & 7/5 Rhythm */}
-        <div className="max-w-[1040px] mx-auto w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-6 lg:gap-8">
+        {/* Products Grid: 2-Column Wide Full-Bleed Editorial Spread with Spotlight & Spine Alignment */}
+        <div className="w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 xl:gap-12 w-full">
             {filteredProducts.map((product, idx) => {
               const isSpotlight = idx === 0;
               const rhythmClass = isSpotlight
@@ -107,6 +107,13 @@ export const MagazineLookbookGrid = ({
                 : idx % 2 === 1
                 ? 'lg:pr-1'
                 : 'lg:pl-1';
+
+              // Center-spine alignment on desktop: left column aligns right, right column aligns left
+              const alignmentClass = isSpotlight
+                ? 'flex justify-center w-full'
+                : idx % 2 === 1
+                ? 'flex lg:justify-end justify-center w-full'
+                : 'flex lg:justify-start justify-center w-full';
 
               // Lateral converging reveal: Left column slides from left, Right column slides from right
               const revealClass = isSpotlight
@@ -116,7 +123,7 @@ export const MagazineLookbookGrid = ({
                 : 'reveal-slide-right';
 
               return (
-                <div key={product.id} className={`${rhythmClass} flex justify-center w-full`}>
+                <div key={product.id} className={`${rhythmClass} ${alignmentClass}`}>
                   <ProductCard
                     product={product}
                     index={idx}
@@ -132,11 +139,11 @@ export const MagazineLookbookGrid = ({
         </div>
 
         {/* ============================================================ */}
-        {/* EDITORIAL SPREAD INTERLUDE: BALANCED 2-COLUMN 16:9 SPLIT     */}
+        {/* EDITORIAL SPREAD INTERLUDE: FULL-BLEED 2-COLUMN 16:9 SPLIT   */}
         {/* ============================================================ */}
-        <div ref={lookbookRef} id="lookbook" className="reveal-on-scroll mt-16 pt-14 border-t border-luxury-sand scroll-mt-20 max-w-[1040px] mx-auto w-full">
+        <div ref={lookbookRef} id="lookbook" className="reveal-on-scroll mt-16 pt-14 border-t border-luxury-sand scroll-mt-20 w-full">
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center w-full">
             
             {/* Left Visual: 16:9 Widescreen Lookbook Visual - slides from left */}
             <div className="reveal-slide-left relative bg-luxury-ivory border border-luxury-sand overflow-hidden aspect-[16/9] group shadow-xl satin-sheen-box">

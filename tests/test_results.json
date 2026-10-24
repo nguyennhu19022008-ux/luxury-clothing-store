@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-24T03:46:51.199Z",
+  "timestamp": "2026-10-24T04:06:50.190Z",
   "environment": {
     "nodeVersion": "v24.19.0",
     "platform": "win32",
@@ -9,7 +9,7 @@
     "total": 129,
     "passed": 129,
     "failed": 0,
-    "durationMs": 65,
+    "durationMs": 63,
     "successRate": "100.00%"
   },
   "tiers": [
@@ -18,7 +18,7 @@
       "total": 93,
       "passed": 93,
       "failed": 0,
-      "duration": 54,
+      "duration": 51,
       "results": [
         {
           "suite": "Feature 1: Slide 0 OLED Cover (Page0_Copyright)",
@@ -36,13 +36,13 @@
           "suite": "Feature 1: Slide 0 OLED Cover (Page0_Copyright)",
           "test": "1.3 Pure OLED black (#000000 / bg-black) background styling",
           "passed": true,
-          "duration": 1
+          "duration": 0
         },
         {
           "suite": "Feature 1: Slide 0 OLED Cover (Page0_Copyright)",
           "test": "1.4 Pure white (#FFFFFF / text-white) high-contrast foreground styling",
           "passed": true,
-          "duration": 0
+          "duration": 1
         },
         {
           "suite": "Feature 1: Slide 0 OLED Cover (Page0_Copyright)",
@@ -96,7 +96,7 @@
           "suite": "Feature 3: Frosted Glass Copyright Card",
           "test": "3.1 Frosted glass aesthetic utilizes backdrop blur and translucent dark background",
           "passed": true,
-          "duration": 1
+          "duration": 0
         },
         {
           "suite": "Feature 3: Frosted Glass Copyright Card",
@@ -210,7 +210,7 @@
           "suite": "Feature 6: Editorial Header & Navigation",
           "test": "6.2 Brand logo displays VUONGGIA with luxury typography styling",
           "passed": true,
-          "duration": 0
+          "duration": 1
         },
         {
           "suite": "Feature 6: Editorial Header & Navigation",
@@ -228,7 +228,7 @@
           "suite": "Feature 6: Editorial Header & Navigation",
           "test": "6.5 Zero emojis in Header code",
           "passed": true,
-          "duration": 1
+          "duration": 0
         },
         {
           "suite": "Feature 6: Editorial Header & Navigation",
@@ -240,7 +240,7 @@
           "suite": "Feature 7: Asymmetrical Hero Lookbook",
           "test": "7.1 HeroLookbook component file exists",
           "passed": true,
-          "duration": 0
+          "duration": 1
         },
         {
           "suite": "Feature 7: Asymmetrical Hero Lookbook",
@@ -294,7 +294,7 @@
           "suite": "Feature 8: 5-Category Showcase",
           "test": "8.4 Category cards include hover micro-interactions",
           "passed": true,
-          "duration": 0
+          "duration": 1
         },
         {
           "suite": "Feature 8: 5-Category Showcase",
@@ -336,13 +336,13 @@
           "suite": "Feature 9: Magazine Lookbook Grid & Product Catalog",
           "test": "9.5 ProductCard provides Quick View and Buy Now triggers",
           "passed": true,
-          "duration": 0
+          "duration": 1
         },
         {
           "suite": "Feature 9: Magazine Lookbook Grid & Product Catalog",
           "test": "9.6 Price formatting in Vietnamese Dong (VND)",
           "passed": true,
-          "duration": 27
+          "duration": 25
         },
         {
           "suite": "Feature 10: Quick View Modal",
@@ -354,7 +354,7 @@
           "suite": "Feature 10: Quick View Modal",
           "test": "10.2 Modal allows adding product with selected color and size into cart",
           "passed": true,
-          "duration": 0
+          "duration": 1
         },
         {
           "suite": "Feature 10: Quick View Modal",
@@ -384,7 +384,7 @@
           "suite": "Feature 11: Quick Cart Drawer",
           "test": "11.1 Adding item to cart updates total count and subtotal",
           "passed": true,
-          "duration": 1
+          "duration": 0
         },
         {
           "suite": "Feature 11: Quick Cart Drawer",
@@ -414,7 +414,7 @@
           "suite": "Feature 11: Quick Cart Drawer",
           "test": "11.6 Collation of identical items with same color and size increments quantity",
           "passed": true,
-          "duration": 0
+          "duration": 1
         },
         {
           "suite": "Feature 12: Quick Order Form & Address Validation",
@@ -438,7 +438,7 @@
           "suite": "Feature 12: Quick Order Form & Address Validation",
           "test": "12.4 Discount coupon code \"VUONGGIA\" grants 10% discount",
           "passed": true,
-          "duration": 0
+          "duration": 1
         },
         {
           "suite": "Feature 12: Quick Order Form & Address Validation",
@@ -486,7 +486,7 @@
           "suite": "Feature 13: Mock Payment Methods & Royal Confirmation Receipt",
           "test": "13.6 Order confirmation stores timestamp and item breakdown",
           "passed": true,
-          "duration": 0
+          "duration": 1
         },
         {
           "suite": "Feature 14: R1 Direct Storefront Entry & Fullscreen Copyright Modal",
@@ -522,7 +522,7 @@
           "suite": "Feature 15: R2 16:9 Widescreen Split 2-Column Layouts",
           "test": "15.1 HeroLookbook utilizes balanced 2-column split and 16:9 widescreen image",
           "passed": true,
-          "duration": 1
+          "duration": 0
         },
         {
           "suite": "Feature 15: R2 16:9 Widescreen Split 2-Column Layouts",
@@ -621,13 +621,13 @@
           "suite": "Group 2: Cart Quantities & Empty State Boundaries",
           "test": "B2.2 Submitting checkout with empty cart throws an explicit error",
           "passed": true,
-          "duration": 1
+          "duration": 0
         },
         {
           "suite": "Group 2: Cart Quantities & Empty State Boundaries",
           "test": "B2.3 Decrementing quantity of single item (qty = 1) from cart removes it completely",
           "passed": true,
-          "duration": 0
+          "duration": 1
         },
         {
           "suite": "Group 2: Cart Quantities & Empty State Boundaries",
@@ -726,7 +726,7 @@
       "total": 11,
       "passed": 11,
       "failed": 0,
-      "duration": 2,
+      "duration": 3,
       "results": [
         {
           "suite": "Interaction 1: Page 0 / Storefront Navigation Lifecycle",
@@ -768,7 +768,7 @@
           "suite": "Interaction 6: Order Lifecycle & Receipt Reset",
           "test": "I6.1 Order confirmation modal displays receipt and resets cleanly",
           "passed": true,
-          "duration": 0
+          "duration": 1
         },
         {
           "suite": "Interaction 7: Gift Wrap Toggle Dynamic Calculations",
@@ -819,7 +819,7 @@
           "suite": "Scenario C: The Curated Luxury Gift Buyer (Minh Châu - Đà Nẵng)",
           "test": "C.1 Complete Journey: Direct Storefront -> Scarf Accessory (Qty 2) -> Velvet Gift Box -> Visa Payment",
           "passed": true,
-          "duration": 0
+          "duration": 1
         }
       ]
     }
