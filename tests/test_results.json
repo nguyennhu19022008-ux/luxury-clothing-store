@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-24T04:37:08.651Z",
+  "timestamp": "2026-10-24T11:56:40.252Z",
   "environment": {
     "nodeVersion": "v24.19.0",
     "platform": "win32",
@@ -9,7 +9,7 @@
     "total": 129,
     "passed": 129,
     "failed": 0,
-    "durationMs": 63,
+    "durationMs": 59,
     "successRate": "100.00%"
   },
   "tiers": [
@@ -18,7 +18,7 @@
       "total": 93,
       "passed": 93,
       "failed": 0,
-      "duration": 50,
+      "duration": 48,
       "results": [
         {
           "suite": "Feature 1: Slide 0 OLED Cover (Page0_Copyright)",
@@ -48,7 +48,7 @@
           "suite": "Feature 1: Slide 0 OLED Cover (Page0_Copyright)",
           "test": "1.5 Navigation bars and standard footers are completely absent on Slide 0",
           "passed": true,
-          "duration": 1
+          "duration": 0
         },
         {
           "suite": "Feature 1: Slide 0 OLED Cover (Page0_Copyright)",
@@ -240,7 +240,7 @@
           "suite": "Feature 7: Asymmetrical Hero Lookbook",
           "test": "7.1 HeroLookbook component file exists",
           "passed": true,
-          "duration": 0
+          "duration": 1
         },
         {
           "suite": "Feature 7: Asymmetrical Hero Lookbook",
@@ -276,7 +276,7 @@
           "suite": "Feature 8: 5-Category Showcase",
           "test": "8.1 CategoryShowcase component file exists",
           "passed": true,
-          "duration": 1
+          "duration": 0
         },
         {
           "suite": "Feature 8: 5-Category Showcase",
@@ -288,7 +288,7 @@
           "suite": "Feature 8: 5-Category Showcase",
           "test": "8.3 CategoryShowcase references categories or onSelectCategory",
           "passed": true,
-          "duration": 0
+          "duration": 1
         },
         {
           "suite": "Feature 8: 5-Category Showcase",
@@ -336,13 +336,13 @@
           "suite": "Feature 9: Magazine Lookbook Grid & Product Catalog",
           "test": "9.5 ProductCard provides Quick View and Buy Now triggers",
           "passed": true,
-          "duration": 0
+          "duration": 2
         },
         {
           "suite": "Feature 9: Magazine Lookbook Grid & Product Catalog",
           "test": "9.6 Price formatting in Vietnamese Dong (VND)",
           "passed": true,
-          "duration": 24
+          "duration": 16
         },
         {
           "suite": "Feature 10: Quick View Modal",
@@ -396,7 +396,7 @@
           "suite": "Feature 11: Quick Cart Drawer",
           "test": "11.3 Decrementing quantity updates cart subtotal synchronously",
           "passed": true,
-          "duration": 0
+          "duration": 1
         },
         {
           "suite": "Feature 11: Quick Cart Drawer",
@@ -420,13 +420,13 @@
           "suite": "Feature 12: Quick Order Form & Address Validation",
           "test": "12.1 Validates customer name is not empty",
           "passed": true,
-          "duration": 1
+          "duration": 0
         },
         {
           "suite": "Feature 12: Quick Order Form & Address Validation",
           "test": "12.2 Validates phone number against Vietnamese telecommunications standard",
           "passed": true,
-          "duration": 0
+          "duration": 1
         },
         {
           "suite": "Feature 12: Quick Order Form & Address Validation",
@@ -444,7 +444,7 @@
           "suite": "Feature 12: Quick Order Form & Address Validation",
           "test": "12.5 Luxury velvet gift wrap adds 150.000 VND fee",
           "passed": true,
-          "duration": 1
+          "duration": 2
         },
         {
           "suite": "Feature 12: Quick Order Form & Address Validation",
@@ -456,7 +456,7 @@
           "suite": "Feature 13: Mock Payment Methods & Royal Confirmation Receipt",
           "test": "13.1 Supports COD (Thử đồ tại gia) payment method",
           "passed": true,
-          "duration": 1
+          "duration": 0
         },
         {
           "suite": "Feature 13: Mock Payment Methods & Royal Confirmation Receipt",
@@ -474,7 +474,7 @@
           "suite": "Feature 13: Mock Payment Methods & Royal Confirmation Receipt",
           "test": "13.4 Generates official Order ID conforming to VG-2026-XXXX format",
           "passed": true,
-          "duration": 0
+          "duration": 1
         },
         {
           "suite": "Feature 13: Mock Payment Methods & Royal Confirmation Receipt",
@@ -498,7 +498,7 @@
           "suite": "Feature 14: R1 Direct Storefront Entry & Fullscreen Copyright Modal",
           "test": "14.2 Page0_Copyright supports fullscreen modal props (isOpen, onClose, onNextPage)",
           "passed": true,
-          "duration": 0
+          "duration": 1
         },
         {
           "suite": "Feature 14: R1 Direct Storefront Entry & Fullscreen Copyright Modal",
@@ -576,7 +576,7 @@
           "suite": "Feature 16: R3 Generous Typography & Anti-Narrow Wrapping",
           "test": "16.4 Primary descriptions across components utilize text-pretty and character bounds",
           "passed": true,
-          "duration": 1
+          "duration": 0
         }
       ]
     },
@@ -717,7 +717,7 @@
           "suite": "Group 5: Product Variations & Customer Data Integrity",
           "test": "B5.4 Whitespace-only customer name or address is rejected",
           "passed": true,
-          "duration": 0
+          "duration": 1
         }
       ]
     },
@@ -726,13 +726,13 @@
       "total": 11,
       "passed": 11,
       "failed": 0,
-      "duration": 2,
+      "duration": 1,
       "results": [
         {
           "suite": "Interaction 1: Page 0 / Storefront Navigation Lifecycle",
           "test": "I1.1 Full navigation roundtrip between Slide 0 and Storefront retains cart state",
           "passed": true,
-          "duration": 1
+          "duration": 0
         },
         {
           "suite": "Interaction 2: Category Filter to Quick View Pipeline",
@@ -750,7 +750,7 @@
           "suite": "Interaction 4: \"Mua Ngay\" Isolation vs Cart Checkout",
           "test": "I4.1 \"Mua ngay\" single item checkout does NOT wipe existing general cart items",
           "passed": true,
-          "duration": 0
+          "duration": 1
         },
         {
           "suite": "Interaction 4: \"Mua Ngay\" Isolation vs Cart Checkout",
@@ -801,7 +801,7 @@
       "total": 3,
       "passed": 3,
       "failed": 0,
-      "duration": 1,
+      "duration": 0,
       "results": [
         {
           "suite": "Scenario A: The First-Time Luxury Connoisseur (Thùy Linh - Hà Nội)",
