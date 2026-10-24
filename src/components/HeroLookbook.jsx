@@ -103,13 +103,13 @@ export const HeroLookbook = ({ onExploreClick, onOpenFabricInspector }) => {
             <div className="absolute -bottom-10 -left-10 w-72 h-72 rounded-full bg-luxury-sand/30 blur-2xl pointer-events-none animate-luxury-aura" style={{ animationDelay: '-5s' }} />
 
             {/* Offset Architectural Backplate for Layered Depth */}
-            <div className="parallax-slow absolute -inset-2 sm:-inset-3 bg-luxury-ivory/70 border border-luxury-sand/80 rounded-3xl -rotate-1 pointer-events-none shadow-md hidden sm:block" />
+            <div className="parallax-slow absolute -inset-2 sm:-inset-3 bg-luxury-ivory/70 border border-luxury-sand/80 rounded-none -rotate-1 pointer-events-none shadow-md hidden sm:block" />
 
             {/* Double-Bezel Outer Shell */}
-            <div className="relative p-2.5 sm:p-3 bg-luxury-bone/90 sm:bg-luxury-ivory/90 rounded-3xl border border-luxury-sand/80 shadow-2xl backdrop-blur-sm w-full">
+            <div className="relative p-2.5 sm:p-3 bg-luxury-bone/90 sm:bg-luxury-ivory/90 rounded-none border border-luxury-sand/80 shadow-2xl backdrop-blur-sm w-full">
               
               {/* Inner Core in 16:9 Widescreen */}
-              <div className="relative w-full aspect-[16/9] rounded-[calc(1.5rem-0.625rem)] overflow-hidden bg-neutral-900 satin-sheen-box group shadow-[inset_0_1px_1px_rgba(255,255,255,0.3)]">
+              <div className="relative w-full aspect-[16/9] rounded-none overflow-hidden bg-neutral-900 satin-sheen-box group shadow-[inset_0_1px_1px_rgba(255,255,255,0.3)]">
                 
                 <img
                   src="https://images.unsplash.com/photo-1539533018447-63fcce2678e3?q=80&w=1200&auto=format&fit=crop"
@@ -122,7 +122,7 @@ export const HeroLookbook = ({ onExploreClick, onOpenFabricInspector }) => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60 pointer-events-none" />
 
                 {/* Editorial Look Tag */}
-                <div className="absolute bottom-4 left-4 right-4 bg-luxury-bone/90 backdrop-blur-md p-3.5 border border-luxury-sand text-left rounded-xl">
+                <div className="absolute bottom-4 left-4 right-4 bg-luxury-bone/90 backdrop-blur-md p-3.5 border border-luxury-sand text-left rounded-none">
                   <div className="flex items-center justify-between">
                     <span className="font-mono text-[10px] tracking-widest text-luxury-gold font-bold uppercase">
                       LOOK 01 · EDITION LIMITÉE

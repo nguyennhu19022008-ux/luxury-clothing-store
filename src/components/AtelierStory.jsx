@@ -50,8 +50,8 @@ export const AtelierStory = () => {
           
           {/* Left: 16:9 Widescreen Artisan Photography with Double-Bezel Champagne Glow */}
           <div ref={photoRef} className="reveal-scale relative w-full">
-            <div className="p-2.5 sm:p-3 bg-neutral-900/90 rounded-3xl border border-luxury-gold/40 shadow-[0_0_50px_rgba(0,0,0,0.8)]">
-              <div className="aspect-[16/9] bg-black rounded-[calc(1.5rem-0.625rem)] overflow-hidden relative shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)] satin-sheen-box group">
+            <div className="p-2.5 sm:p-3 bg-neutral-900/90 rounded-none border border-luxury-gold/40 shadow-[0_0_50px_rgba(0,0,0,0.8)]">
+              <div className="aspect-[16/9] bg-black rounded-none overflow-hidden relative shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)] satin-sheen-box group">
                 <img
                   src="https://images.unsplash.com/photo-1598554747436-c9293d6a588f?q=80&w=1200&auto=format&fit=crop"
                   alt="Bàn tay nghệ nhân may đo thủ công tại xưởng Maison Vuonggia"
@@ -59,7 +59,7 @@ export const AtelierStory = () => {
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
-                <div className="absolute bottom-4 left-4 right-4 p-3.5 bg-black/85 backdrop-blur-md border border-white/15 rounded-xl">
+                <div className="absolute bottom-4 left-4 right-4 p-3.5 bg-black/85 backdrop-blur-md border border-white/15 rounded-none">
                   <div className="font-mono text-[10px] tracking-widest text-luxury-gold uppercase font-bold">
                     ATELIER ARCHIVE /// 2026
                   </div>
@@ -96,7 +96,7 @@ export const AtelierStory = () => {
                 return (
                   <div
                     key={i}
-                    className={`reveal-child stagger-${i + 1} elastic-haptic flex flex-col space-y-2 p-5 bg-[#161616] border border-white/10 hover:border-luxury-gold/50 rounded-2xl transition-all duration-300 shadow-lg`}
+                    className={`reveal-child stagger-${i + 1} elastic-haptic flex flex-col space-y-2 p-5 bg-[#161616] border border-white/10 hover:border-luxury-gold/50 rounded-none transition-all duration-300 shadow-lg`}
                   >
                     <div className="flex items-center gap-2 text-white">
                       <IconComponent className="w-4 h-4 text-luxury-gold stroke-[1.75]" />

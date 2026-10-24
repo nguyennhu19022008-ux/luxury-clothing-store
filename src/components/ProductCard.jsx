@@ -56,11 +56,11 @@ export const ProductCard = ({ product, index = 0, isSpotlight = false, onQuickVi
         isSpotlight
           ? 'bg-gradient-to-br from-luxury-ivory via-luxury-bone to-[#EFE9DF] border-2 border-luxury-gold/60 shadow-2xl p-3.5 sm:p-4.5'
           : 'bg-luxury-bone border border-luxury-sand/80 hover:border-luxury-dark/80 hover:shadow-2xl p-2.5'
-      } transition-all duration-500 transform hover:-translate-y-1 rounded-2xl overflow-hidden`}
+      } transition-all duration-500 transform hover:-translate-y-1 rounded-none overflow-hidden`}
     >
       
       {/* Visual Frame with Satin Sheen Sweep in 16:9 Widescreen (Double-Bezel Inner Core) */}
-      <div className="relative aspect-[16/9] w-full rounded-xl overflow-hidden bg-luxury-ivory satin-sheen-box shadow-[inset_0_1px_1px_rgba(255,255,255,0.3)]">
+      <div className="relative aspect-[16/9] w-full rounded-none overflow-hidden bg-luxury-ivory satin-sheen-box border-b border-luxury-sand/60 shadow-[inset_0_1px_1px_rgba(255,255,255,0.3)]">
         <img
           src={currentImage}
           alt={product.name}

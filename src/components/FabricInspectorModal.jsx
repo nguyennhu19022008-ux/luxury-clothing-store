@@ -52,7 +52,7 @@ export const FabricInspectorModal = ({ isOpen, onClose }) => {
       />
 
       {/* Double-Bezel Modal Container */}
-      <div className="relative w-full max-w-5xl bg-luxury-bone/95 backdrop-blur-2xl border border-luxury-sand/80 shadow-2xl rounded-3xl p-6 sm:p-8 lg:p-10 z-10 animate-modal-spring overflow-hidden">
+      <div className="relative w-full max-w-5xl bg-luxury-bone/95 backdrop-blur-2xl border border-luxury-sand/80 shadow-2xl rounded-none p-6 sm:p-8 lg:p-10 z-10 animate-modal-spring overflow-hidden">
         
         {/* Header */}
         <div className="flex items-center justify-between pb-6 border-b border-luxury-sand">
@@ -82,8 +82,8 @@ export const FabricInspectorModal = ({ isOpen, onClose }) => {
           
           {/* Left: 16:9 Double-Bezel Interactive Visual Lens */}
           <div className="relative w-full">
-            <div className="p-2.5 bg-luxury-ivory/60 rounded-3xl border border-luxury-sand/80 shadow-xl">
-              <div className="aspect-[16/9] w-full rounded-[calc(1.5rem-0.625rem)] overflow-hidden relative bg-neutral-900 group satin-sheen-box">
+            <div className="p-2.5 bg-luxury-ivory/60 rounded-none border border-luxury-sand/80 shadow-xl">
+              <div className="aspect-[16/9] w-full rounded-none overflow-hidden relative bg-neutral-900 group satin-sheen-box">
                 <img
                   src={selectedFabric.textureImage}
                   alt={selectedFabric.name}
