@@ -33,11 +33,11 @@ export const MagazineLookbookGrid = ({
   });
 
   return (
-    <section id="collection" className="py-14 lg:py-20 bg-luxury-bone border-b border-luxury-sand scroll-mt-20">
-      <div className="w-full max-w-none px-6 sm:px-12 lg:px-16 xl:px-24 2xl:px-32">
+    <section id="collection" className="py-10 lg:py-14 bg-luxury-bone border-b border-luxury-sand scroll-mt-20">
+      <div className="w-full max-w-none px-6 sm:px-12 lg:px-16 xl:px-24">
         
         {/* Section Header with text-balance and text-pretty */}
-        <div ref={headerRef} className="reveal-on-scroll flex flex-col items-center text-center max-w-3xl mx-auto mb-8 sm:mb-10">
+        <div ref={headerRef} className="reveal-on-scroll flex flex-col items-center text-center max-w-3xl mx-auto mb-6 sm:mb-8">
           <div className="flex items-center gap-2 mb-3">
             <span className="w-4 h-[1px] bg-luxury-gold inline-block" />
             <span className="text-[11px] font-semibold tracking-[0.25em] text-luxury-gold uppercase">
@@ -56,7 +56,7 @@ export const MagazineLookbookGrid = ({
         </div>
 
         {/* Category Filter Tabs & Sorting Toolbar - Full Bleed */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 sm:mb-10 pb-3 border-b border-luxury-sand w-full">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 sm:mb-8 pb-3 border-b border-luxury-sand w-full">
           
           {/* Tabs */}
           <div className="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-none" role="tablist">
@@ -97,13 +97,13 @@ export const MagazineLookbookGrid = ({
 
         </div>
 
-        {/* Products Grid: 2-Column Wide Full-Bleed Editorial Spread with Spotlight & Spine Alignment */}
+        {/* Products Grid: Multi-Column Wide Full-Bleed Editorial Spread with Spotlight & Converging Cascade */}
         <div className="w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 xl:gap-12 w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6 lg:gap-8 xl:gap-12 w-full">
             {filteredProducts.map((product, idx) => {
               const isSpotlight = idx === 0;
               const rhythmClass = isSpotlight
-                ? 'lg:col-span-2'
+                ? 'col-span-full lg:col-span-2 xl:col-span-3 2xl:col-span-4'
                 : idx % 2 === 1
                 ? 'lg:pr-1'
                 : 'lg:pl-1';
@@ -112,8 +112,8 @@ export const MagazineLookbookGrid = ({
               const alignmentClass = isSpotlight
                 ? 'flex justify-center w-full'
                 : idx % 2 === 1
-                ? 'flex lg:justify-end justify-center w-full'
-                : 'flex lg:justify-start justify-center w-full';
+                ? 'flex lg:justify-end xl:justify-center justify-center w-full'
+                : 'flex lg:justify-start xl:justify-center justify-center w-full';
 
               // Lateral converging reveal: Left column slides from left, Right column slides from right
               const revealClass = isSpotlight
@@ -141,7 +141,7 @@ export const MagazineLookbookGrid = ({
         {/* ============================================================ */}
         {/* EDITORIAL SPREAD INTERLUDE: FULL-BLEED 2-COLUMN 16:9 SPLIT   */}
         {/* ============================================================ */}
-        <div ref={lookbookRef} id="lookbook" className="reveal-on-scroll mt-16 pt-14 border-t border-luxury-sand scroll-mt-20 w-full">
+        <div ref={lookbookRef} id="lookbook" className="reveal-on-scroll mt-12 pt-10 border-t border-luxury-sand scroll-mt-20 w-full">
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center w-full">
             
