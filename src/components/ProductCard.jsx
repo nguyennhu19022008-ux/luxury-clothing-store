@@ -3,7 +3,7 @@ import { Eye, ShoppingBag } from 'lucide-react';
 import { useStore, formatVND } from '../context/StoreContext';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
-export const ProductCard = ({ product, index = 0, onQuickView, onQuickOrder }) => {
+export const ProductCard = ({ product, index = 0, isSpotlight = false, onQuickView, onQuickOrder }) => {
   let store = null;
   try {
     store = useStore();
@@ -50,7 +50,14 @@ export const ProductCard = ({ product, index = 0, onQuickView, onQuickOrder }) =
   const staggerClass = `stagger-${(index % 4) + 1}`;
 
   return (
-    <article ref={cardRef} className={`reveal-on-scroll ${staggerClass} group flex flex-col bg-luxury-bone border border-luxury-sand/80 hover:border-luxury-dark/80 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1 rounded-2xl overflow-hidden p-2.5`}>
+    <article
+      ref={cardRef}
+      className={`reveal-on-scroll ${staggerClass} elastic-haptic group flex flex-col ${
+        isSpotlight
+          ? 'bg-gradient-to-br from-luxury-ivory via-luxury-bone to-[#EFE9DF] border-2 border-luxury-gold/60 shadow-2xl p-3.5 sm:p-4.5'
+          : 'bg-luxury-bone border border-luxury-sand/80 hover:border-luxury-dark/80 hover:shadow-2xl p-2.5'
+      } transition-all duration-500 transform hover:-translate-y-1 rounded-2xl overflow-hidden`}
+    >
       
       {/* Visual Frame with Satin Sheen Sweep in 16:9 Widescreen (Double-Bezel Inner Core) */}
       <div className="relative aspect-[16/9] w-full rounded-xl overflow-hidden bg-luxury-ivory satin-sheen-box shadow-[inset_0_1px_1px_rgba(255,255,255,0.3)]">
@@ -63,7 +70,13 @@ export const ProductCard = ({ product, index = 0, onQuickView, onQuickOrder }) =
 
         {/* Top Badges */}
         <div className="absolute top-3 left-3 flex flex-col gap-1.5 z-10">
-          {product.badge && (
+          {isSpotlight && (
+            <span className="px-3 py-1 bg-luxury-dark text-luxury-bone text-[9.5px] sm:text-[10px] font-mono tracking-widest uppercase rounded-full shadow-lg border border-luxury-gold/50 flex items-center gap-1.5 font-bold">
+              <span className="w-2 h-2 rounded-full bg-luxury-gold animate-pulse" />
+              CHẾ TÁC NỔI BẬT /// ATELIER SPOTLIGHT
+            </span>
+          )}
+          {product.badge && !isSpotlight && (
             <span className="px-2.5 py-0.5 bg-luxury-bone/95 backdrop-blur-sm text-[9.5px] font-mono tracking-wider uppercase text-luxury-dark border border-luxury-sand/80 rounded-full shadow-sm">
               {product.badge}
             </span>
@@ -80,7 +93,7 @@ export const ProductCard = ({ product, index = 0, onQuickView, onQuickOrder }) =
           <button
             type="button"
             onClick={handleQuickViewClick}
-            className="flex-1 py-2 px-3 bg-luxury-bone/95 hover:bg-luxury-bone text-luxury-dark backdrop-blur-md text-xs font-semibold uppercase tracking-wider border border-luxury-sand rounded-full flex items-center justify-center gap-1.5 shadow-md active:scale-95 active-haptic transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-luxury-dark cursor-pointer"
+            className="elastic-haptic flex-1 py-2 px-3 bg-luxury-bone/95 hover:bg-luxury-bone text-luxury-dark backdrop-blur-md text-xs font-semibold uppercase tracking-wider border border-luxury-sand rounded-full flex items-center justify-center gap-1.5 shadow-md active-haptic transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-luxury-dark cursor-pointer"
             title="Xem chi tiết thiết kế"
           >
             <Eye className="w-3.5 h-3.5" />
@@ -90,7 +103,7 @@ export const ProductCard = ({ product, index = 0, onQuickView, onQuickOrder }) =
           <button
             type="button"
             onClick={handleQuickOrderClick}
-            className="flex-1 py-2 px-3 bg-luxury-dark hover:bg-neutral-800 text-luxury-bone text-xs font-semibold uppercase tracking-wider rounded-full flex items-center justify-center gap-1.5 shadow-md active:scale-95 active-haptic transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-luxury-dark cursor-pointer"
+            className="btn-satin-sheen elastic-haptic flex-1 py-2 px-3 bg-luxury-dark hover:bg-neutral-800 text-luxury-bone text-xs font-semibold uppercase tracking-wider rounded-full flex items-center justify-center gap-1.5 shadow-md active-haptic transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-luxury-dark cursor-pointer"
             title="Mua ngay tác phẩm"
           >
             <ShoppingBag className="w-3.5 h-3.5" />

@@ -5,20 +5,20 @@ export const HeroLookbook = ({ onExploreClick, onOpenFabricInspector }) => {
   return (
     <section className="relative w-full min-h-[calc(100vh-72px)] flex items-center bg-luxury-bone overflow-hidden border-b border-luxury-sand">
       {/* 2XL & Widescreen Flank Editorial Coordinates (Eliminates wide-screen empty flank feel on 1440px+) */}
-      <div className="hidden min-[1400px]:flex 2xl:flex absolute left-6 2xl:left-8 top-1/2 -translate-y-1/2 flex-col items-center gap-8 text-[10px] font-mono tracking-[0.3em] uppercase text-luxury-sand select-none pointer-events-none [writing-mode:vertical-rl] rotate-180">
+      <div className="parallax-fast hidden min-[1400px]:flex 2xl:flex absolute left-6 2xl:left-8 top-1/2 -translate-y-1/2 flex-col items-center gap-8 text-[10px] font-mono tracking-[0.3em] uppercase text-luxury-sand select-none pointer-events-none [writing-mode:vertical-rl] rotate-180">
         <span>HAUTE COUTURE /// N° 01</span>
         <span className="w-8 h-[1px] bg-luxury-sand/80" />
         <span>PARIS — HANOI</span>
       </div>
 
-      <div className="hidden min-[1400px]:flex 2xl:flex absolute right-6 2xl:right-8 top-1/2 -translate-y-1/2 flex-col items-center gap-8 text-[10px] font-mono tracking-[0.3em] uppercase text-luxury-sand select-none pointer-events-none [writing-mode:vertical-rl]">
+      <div className="parallax-fast hidden min-[1400px]:flex 2xl:flex absolute right-6 2xl:right-8 top-1/2 -translate-y-1/2 flex-col items-center gap-8 text-[10px] font-mono tracking-[0.3em] uppercase text-luxury-sand select-none pointer-events-none [writing-mode:vertical-rl]">
         <span>AUTOMNE — HIVER 2026</span>
         <span className="w-8 h-[1px] bg-luxury-sand/80" />
         <span>EDITION LIMITÉE</span>
       </div>
 
       <div className="w-full max-w-none px-6 sm:px-12 lg:px-16 xl:px-24 2xl:px-32 py-12 lg:py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 xl:gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 lg:[grid-template-columns:3fr_2fr] gap-10 lg:gap-16 xl:gap-20 items-center">
           
           {/* Left: Asymmetric 60/40 Editorial Narrative & Haute Couture CTAs */}
           <div className="flex flex-col justify-center space-y-6 lg:space-y-8 z-10 lg:pr-6 xl:pr-10">
@@ -36,7 +36,7 @@ export const HeroLookbook = ({ onExploreClick, onOpenFabricInspector }) => {
                 <button
                   type="button"
                   onClick={onOpenFabricInspector}
-                  className="inline-flex items-center gap-1.5 px-3 py-0.5 bg-luxury-ivory hover:bg-luxury-dark text-luxury-muted hover:text-luxury-bone border border-luxury-sand text-[10px] font-mono tracking-wider uppercase rounded-full transition-all cursor-pointer shadow-sm active:scale-95"
+                  className="elastic-haptic inline-flex items-center gap-1.5 px-3 py-0.5 bg-luxury-ivory hover:bg-luxury-dark text-luxury-muted hover:text-luxury-bone border border-luxury-sand text-[10px] font-mono tracking-wider uppercase rounded-full transition-all cursor-pointer shadow-sm"
                   title="Soi kính lúp cấu trúc sợi len Cashmere và lụa tơ tằm"
                 >
                   <Sparkles className="w-3 h-3 text-luxury-gold" />
@@ -45,10 +45,12 @@ export const HeroLookbook = ({ onExploreClick, onOpenFabricInspector }) => {
               )}
             </div>
 
-            {/* Monumental Headline with text-balance and non-breaking space for compound word */}
-            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-normal tracking-tight text-luxury-dark leading-[1.14] text-balance descender-safe">
-              Bản Hòa Ca Của Tinh Giản <br className="hidden sm:inline" /> &amp; May&nbsp;Đo Thượng Tuyển
-            </h1>
+            {/* Monumental Headline with text-mask wipe, text-balance and non-breaking space for compound word */}
+            <div className="text-mask-container is-revealed">
+              <h1 className="text-mask-wipe font-serif text-4xl sm:text-5xl md:text-6xl font-normal tracking-tight text-luxury-dark leading-[1.14] text-balance descender-safe">
+                Bản Hòa Ca Của Tinh Giản <br className="hidden sm:inline" /> &amp; May&nbsp;Đo Thượng Tuyển
+              </h1>
+            </div>
 
             {/* Editorial Subtext with text-pretty and optimal character container */}
             <p className="font-sans text-base sm:text-lg text-luxury-charcoal max-w-[75ch] font-normal leading-relaxed text-pretty">
@@ -60,7 +62,7 @@ export const HeroLookbook = ({ onExploreClick, onOpenFabricInspector }) => {
               <a
                 href="#collection"
                 onClick={onExploreClick}
-                className="group inline-flex items-center justify-between gap-4 pl-8 pr-3 py-3 bg-luxury-dark text-luxury-bone text-xs font-semibold uppercase tracking-[0.18em] transition-all hover:bg-neutral-800 hover:shadow-xl active:scale-[0.98] rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-luxury-dark cursor-pointer"
+                className="btn-satin-sheen elastic-haptic group inline-flex items-center justify-between gap-4 pl-8 pr-3 py-3 bg-luxury-dark text-luxury-bone text-xs font-semibold uppercase tracking-[0.18em] transition-all hover:bg-neutral-800 hover:shadow-xl rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-luxury-dark cursor-pointer"
               >
                 <span>KHÁM PHÁ BỘ SƯU TẬP</span>
                 <span className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-0.5">
@@ -70,7 +72,7 @@ export const HeroLookbook = ({ onExploreClick, onOpenFabricInspector }) => {
 
               <a
                 href="#lookbook"
-                className="group inline-flex items-center justify-between gap-3 pl-7 pr-3 py-3 border border-luxury-dark text-luxury-dark text-xs font-semibold uppercase tracking-[0.18em] transition-all hover:bg-luxury-ivory active:scale-[0.98] rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-luxury-dark cursor-pointer"
+                className="elastic-haptic group inline-flex items-center justify-between gap-3 pl-7 pr-3 py-3 border border-luxury-dark text-luxury-dark text-xs font-semibold uppercase tracking-[0.18em] transition-all hover:bg-luxury-ivory rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-luxury-dark cursor-pointer"
               >
                 <span>XEM LOOKBOOK MÙA THU</span>
                 <span className="w-8 h-8 rounded-full bg-luxury-dark/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
@@ -101,7 +103,7 @@ export const HeroLookbook = ({ onExploreClick, onOpenFabricInspector }) => {
             <div className="absolute -bottom-10 -left-10 w-72 h-72 rounded-full bg-luxury-sand/30 blur-2xl pointer-events-none animate-luxury-aura" style={{ animationDelay: '-5s' }} />
 
             {/* Offset Architectural Backplate for Layered Depth */}
-            <div className="absolute -inset-2 sm:-inset-3 bg-luxury-ivory/70 border border-luxury-sand/80 rounded-3xl -rotate-1 pointer-events-none shadow-md hidden sm:block" />
+            <div className="parallax-slow absolute -inset-2 sm:-inset-3 bg-luxury-ivory/70 border border-luxury-sand/80 rounded-3xl -rotate-1 pointer-events-none shadow-md hidden sm:block" />
 
             {/* Double-Bezel Outer Shell */}
             <div className="relative p-2.5 sm:p-3 bg-luxury-bone/90 sm:bg-luxury-ivory/90 rounded-3xl border border-luxury-sand/80 shadow-2xl backdrop-blur-sm w-full">

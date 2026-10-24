@@ -97,17 +97,27 @@ export const MagazineLookbookGrid = ({
 
         </div>
 
-        {/* Products Grid: 2-Column Wide Editorial Magazine Spread */}
+        {/* Products Grid: 2-Column Wide Editorial Magazine Spread with Spotlight & 7/5 Rhythm */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-          {filteredProducts.map((product, idx) => (
-            <ProductCard
-              key={product.id}
-              product={product}
-              index={idx}
-              onQuickView={onQuickView}
-              onQuickOrder={onQuickOrder}
-            />
-          ))}
+          {filteredProducts.map((product, idx) => {
+            const isSpotlight = idx === 0;
+            const rhythmClass = isSpotlight
+              ? 'lg:col-span-2'
+              : idx % 2 === 1
+              ? 'lg:pr-1'
+              : 'lg:pl-1';
+            return (
+              <div key={product.id} className={rhythmClass}>
+                <ProductCard
+                  product={product}
+                  index={idx}
+                  isSpotlight={isSpotlight}
+                  onQuickView={onQuickView}
+                  onQuickOrder={onQuickOrder}
+                />
+              </div>
+            );
+          })}
         </div>
 
         {/* ============================================================ */}

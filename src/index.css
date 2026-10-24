@@ -375,6 +375,53 @@
   will-change: transform;
 }
 
+/* R4 Motion Systems: Spring Physics Elastic Haptic */
+.elastic-haptic {
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.elastic-haptic:hover {
+  transform: translateY(-2px) scale(1.02);
+}
+.elastic-haptic:active {
+  transform: translateY(1px) scale(0.97);
+}
+
+/* R4 Motion Systems: Button Satin Sheen Sweep */
+.btn-satin-sheen {
+  position: relative;
+  overflow: hidden;
+}
+.btn-satin-sheen::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.75s ease;
+}
+.btn-satin-sheen:hover::after {
+  left: 150%;
+}
+
+/* R4 Motion Systems: Staggered Text Mask Wipe */
+.text-mask-container {
+  overflow: hidden;
+  display: inline-block;
+}
+.text-mask-wipe {
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease;
+}
+.is-revealed .text-mask-wipe,
+.text-mask-container.is-revealed .text-mask-wipe {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 /* Reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
   .animate-marquee {
@@ -382,10 +429,15 @@
   }
   .reveal-on-scroll,
   .reveal-scale,
-  .reveal-child {
+  .reveal-child,
+  .text-mask-wipe,
+  .elastic-haptic {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
+  }
+  .btn-satin-sheen::after {
+    display: none !important;
   }
   * {
     animation-duration: 0.01ms !important;
@@ -394,3 +446,4 @@
     scroll-behavior: auto !important;
   }
 }
+

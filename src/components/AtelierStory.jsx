@@ -30,9 +30,21 @@ export const AtelierStory = () => {
   ];
 
   return (
-    <section id="atelier" className="py-20 lg:py-32 bg-[#0D0D0D] text-luxury-bone border-b border-white/10 scroll-mt-20">
+    <section id="atelier" className="py-20 lg:py-32 bg-[#0D0D0D] text-luxury-bone border-b border-white/10 scroll-mt-20 relative overflow-hidden">
+      {/* Atmospheric Transition Veil from Warm Bone to Velvet Midnight */}
+      <div className="absolute top-0 inset-x-0 h-16 bg-gradient-to-b from-black/50 to-transparent pointer-events-none" />
+
       <div className="w-full max-w-none px-6 sm:px-12 lg:px-16 xl:px-24 2xl:px-32">
         
+        {/* Atmospheric Transition Banner */}
+        <div className="flex items-center justify-center gap-3 pb-8 border-b border-white/10 mb-12 sm:mb-16">
+          <span className="w-8 sm:w-16 h-[1px] bg-luxury-gold/40" />
+          <span className="font-mono text-[9px] sm:text-[10.5px] tracking-[0.3em] uppercase text-luxury-gold/90 font-medium text-center">
+            CHUYỂN TIẾP KHÔNG GIAN /// VÀO XƯỞNG MAY KÍN ATELIER HÀ ĐÔNG
+          </span>
+          <span className="w-8 sm:w-16 h-[1px] bg-luxury-gold/40" />
+        </div>
+
         {/* Narrative Split: Balanced 2-Column Split */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 xl:gap-20 items-center">
           
@@ -84,7 +96,7 @@ export const AtelierStory = () => {
                 return (
                   <div
                     key={i}
-                    className={`reveal-child stagger-${i + 1} flex flex-col space-y-2 p-5 bg-[#161616] border border-white/10 hover:border-luxury-gold/50 rounded-2xl transition-all duration-300 shadow-lg`}
+                    className={`reveal-child stagger-${i + 1} elastic-haptic flex flex-col space-y-2 p-5 bg-[#161616] border border-white/10 hover:border-luxury-gold/50 rounded-2xl transition-all duration-300 shadow-lg`}
                   >
                     <div className="flex items-center gap-2 text-white">
                       <IconComponent className="w-4 h-4 text-luxury-gold stroke-[1.75]" />

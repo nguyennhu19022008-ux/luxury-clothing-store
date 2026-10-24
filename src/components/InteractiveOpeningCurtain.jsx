@@ -18,6 +18,13 @@ export const InteractiveOpeningCurtain = ({ onComplete }) => {
     if (isOpening) return;
     setIsOpening(true);
 
+    // Haptic vibration feedback for supported mobile devices
+    if (typeof navigator !== 'undefined' && navigator.vibrate) {
+      try {
+        navigator.vibrate(20);
+      } catch (_) {}
+    }
+
     // Check if user prefers reduced motion
     const prefersReducedMotion =
       typeof window !== 'undefined' &&
@@ -124,10 +131,10 @@ export const InteractiveOpeningCurtain = ({ onComplete }) => {
         </div>
 
         {/* Interactive Glowing Shutter Button / Pill */}
-        <div className="group relative inline-flex items-center gap-3 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-neutral-900/90 hover:bg-neutral-800/90 text-white border border-luxury-gold/60 shadow-[0_0_30px_rgba(166,138,86,0.3)] hover:shadow-[0_0_45px_rgba(166,138,86,0.55)] transition-all duration-300 transform group-hover:scale-105 active:scale-95">
+        <div className="group relative inline-flex items-center gap-3 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-neutral-900/90 hover:bg-neutral-800/90 text-white border border-luxury-gold/60 shadow-[0_0_30px_rgba(166,138,86,0.3)] hover:shadow-[0_0_45px_rgba(166,138,86,0.55)] transition-all duration-300 transform group-hover:scale-105 active:scale-95 elastic-haptic">
           <span className="w-2.5 h-2.5 rounded-full bg-luxury-gold animate-ping" />
           <span className="font-mono text-xs sm:text-sm tracking-[0.25em] uppercase text-luxury-bone font-medium">
-            CHẠM ĐỂ MỞ MÀN /// CLICK TO UNVEIL
+            CHẠM ĐỂ MỞ MÀN /// CLICK TO ENTER
           </span>
           <Sparkles className="w-4 h-4 text-luxury-gold shrink-0 transition-transform duration-300 group-hover:rotate-12" />
         </div>

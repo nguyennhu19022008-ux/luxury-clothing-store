@@ -11,7 +11,10 @@ export const LuxuryCursor = () => {
 
   useEffect(() => {
     // Only activate on devices with fine pointer (mouse/trackpad), not touch screens
-    const isTouch = window.matchMedia('(pointer: coarse)').matches;
+    const isTouch =
+      typeof window !== 'undefined' &&
+      typeof window.matchMedia === 'function' &&
+      window.matchMedia('(pointer: coarse)').matches;
     if (isTouch) return;
 
     const handleMouseMove = (e) => {

@@ -93,10 +93,10 @@ export const CategoryShowcase = ({ onSelectCategory }) => {
                     key={item.id}
                     type="button"
                     onClick={() => handleChoose(item.id)}
-                    className={`reveal-child stagger-${idx + 1} w-full p-4 sm:p-5 text-left transition-all duration-300 border rounded-xl flex items-center justify-between cursor-pointer ${
+                    className={`reveal-child stagger-${idx + 1} elastic-haptic w-full text-left transition-all duration-300 border rounded-xl flex items-center justify-between cursor-pointer ${
                       isActive
-                        ? 'bg-[#EFE9DF] border-luxury-dark shadow-md translate-x-1 sm:translate-x-2'
-                        : 'bg-white/60 border-[#E8E2D7] hover:border-luxury-dark/50 hover:bg-white/90'
+                        ? 'p-5 sm:p-6 bg-[#EFE9DF] border-luxury-dark shadow-lg translate-x-1 sm:translate-x-3 scale-[1.01]'
+                        : 'p-4 sm:p-4.5 bg-white/60 border-[#E8E2D7] hover:border-luxury-dark/50 hover:bg-white/90'
                     }`}
                   >
                     <div className="flex items-center gap-4">
@@ -104,9 +104,16 @@ export const CategoryShowcase = ({ onSelectCategory }) => {
                         0{idx + 1}
                       </span>
                       <div>
-                        <h3 className="font-serif text-lg sm:text-xl font-medium text-luxury-dark text-balance">
-                          {item.title}
-                        </h3>
+                        <div className="flex items-center gap-2">
+                          <h3 className="font-serif text-lg sm:text-xl font-medium text-luxury-dark text-balance">
+                            {item.title}
+                          </h3>
+                          {isActive && (
+                            <span className="px-2 py-0.5 rounded-full bg-luxury-dark text-[9px] font-mono tracking-widest text-luxury-bone uppercase font-medium">
+                              Đang Khảo Cứu
+                            </span>
+                          )}
+                        </div>
                         <span className="text-[11px] font-mono text-luxury-muted uppercase tracking-wider block mt-0.5">
                           {item.tagline}
                         </span>
@@ -133,7 +140,7 @@ export const CategoryShowcase = ({ onSelectCategory }) => {
                   const el = document.getElementById('collection');
                   if (el) el.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-luxury-dark text-luxury-bone text-xs font-semibold uppercase tracking-wider hover:bg-neutral-800 transition-colors shrink-0 rounded-full"
+                className="btn-satin-sheen elastic-haptic inline-flex items-center gap-2 px-5 py-2.5 bg-luxury-dark text-luxury-bone text-xs font-semibold uppercase tracking-wider hover:bg-neutral-800 transition-colors shrink-0 rounded-full"
               >
                 <span>Xem {activeItem.title}</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -141,31 +148,56 @@ export const CategoryShowcase = ({ onSelectCategory }) => {
             </div>
           </div>
 
-          {/* Right Column: 16:9 Widescreen Showcase Image Frame with Warm Camel Frame */}
-          <div className="relative w-full aspect-[16/9] bg-luxury-ivory border border-[#D8D0C3] rounded-2xl overflow-hidden shadow-2xl satin-sheen-box group">
-            <img
-              src={activeItem.image}
-              alt={activeItem.title}
-              key={activeItem.id}
-              className={`w-full h-full object-cover object-center transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105 ${
-                isTransitioning ? 'opacity-40 scale-[0.98]' : 'opacity-100 scale-100'
-              }`}
-              loading="lazy"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
-            <div className="absolute top-4 left-4 bg-luxury-bone/95 backdrop-blur-sm px-3.5 py-1 rounded-full border border-luxury-sand text-[10.5px] font-mono tracking-widest text-luxury-dark font-bold uppercase shadow-sm">
-              PHÂN LOẠI /// {activeItem.title.toUpperCase()}
-            </div>
-            <div className="absolute bottom-4 left-4 right-4 bg-luxury-bone/90 backdrop-blur-md p-3.5 sm:p-4 rounded-xl border border-luxury-sand flex items-center justify-between shadow-lg">
-              <div>
-                <div className="text-[10px] font-mono tracking-wider text-luxury-gold uppercase font-bold">
-                  {activeItem.tagline}
-                </div>
-                <div className="font-serif text-base sm:text-lg text-luxury-dark font-medium text-balance mt-0.5">
-                  {activeItem.title}
-                </div>
+          {/* Right Column: 16:9 Master Showcase Frame & Interactive Filmstrip Carousel */}
+          <div className="flex flex-col space-y-4">
+            {/* Master 16:9 Showcase Frame */}
+            <div className="relative w-full aspect-[16/9] bg-luxury-ivory border border-[#D8D0C3] rounded-2xl overflow-hidden shadow-2xl satin-sheen-box group">
+              <img
+                src={activeItem.image}
+                alt={activeItem.title}
+                key={activeItem.id}
+                className={`w-full h-full object-cover object-center transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105 ${
+                  isTransitioning ? 'opacity-40 scale-[0.98]' : 'opacity-100 scale-100'
+                }`}
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute top-4 left-4 bg-luxury-bone/95 backdrop-blur-sm px-3.5 py-1 rounded-full border border-luxury-sand text-[10.5px] font-mono tracking-widest text-luxury-dark font-bold uppercase shadow-sm">
+                PHÂN LOẠI /// {activeItem.title.toUpperCase()}
               </div>
-              <span className="text-xs font-mono text-luxury-muted">{activeItem.count}</span>
+              <div className="absolute bottom-4 left-4 right-4 bg-luxury-bone/90 backdrop-blur-md p-3.5 sm:p-4 rounded-xl border border-luxury-sand flex items-center justify-between shadow-lg">
+                <div>
+                  <div className="text-[10px] font-mono tracking-wider text-luxury-gold uppercase font-bold">
+                    {activeItem.tagline}
+                  </div>
+                  <div className="font-serif text-base sm:text-lg text-luxury-dark font-medium text-balance mt-0.5">
+                    {activeItem.title}
+                  </div>
+                </div>
+                <span className="text-xs font-mono text-luxury-muted">{activeItem.count}</span>
+              </div>
+            </div>
+
+            {/* Interactive Filmstrip Carousel: Fluid flex thumbnails */}
+            <div className="flex items-center gap-2.5 pt-1 overflow-x-auto pb-1 scrollbar-none" aria-label="Khung phim chuyển phân loại">
+              {CATEGORY_ITEMS.map((item, fIdx) => (
+                <button
+                  key={item.id}
+                  type="button"
+                  onClick={() => handleChoose(item.id)}
+                  className={`elastic-haptic relative aspect-[16/9] flex-1 min-w-[70px] rounded-lg overflow-hidden border transition-all cursor-pointer ${
+                    item.id === activeId
+                      ? 'border-luxury-dark ring-2 ring-luxury-gold/70 scale-105 shadow-md'
+                      : 'border-transparent opacity-60 hover:opacity-100'
+                  }`}
+                  title={`Xem phân loại ${item.title}`}
+                >
+                  <img src={item.image} alt={item.title} className="w-full h-full object-cover" loading="lazy" />
+                  <span className="absolute bottom-1 left-1 bg-black/75 px-1 py-0.2 text-[8px] font-mono text-white rounded">
+                    0{fIdx + 1}
+                  </span>
+                </button>
+              ))}
             </div>
           </div>
 
