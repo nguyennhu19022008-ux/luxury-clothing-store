@@ -121,7 +121,7 @@ export const ProductCard = ({
       </div>
 
       {/* Product Information */}
-      <div className="p-3.5 sm:p-4 flex flex-col justify-between flex-grow space-y-2.5">
+      <div className="p-3 sm:p-3.5 flex flex-col flex-grow space-y-2">
         
         {/* Category & Color Swatches */}
         <div className="flex items-center justify-between">
@@ -163,7 +163,7 @@ export const ProductCard = ({
         </p>
 
         {/* Price Row */}
-        <div className="pt-2 border-t border-luxury-sand/60 flex items-baseline justify-between">
+        <div className="mt-auto pt-2 border-t border-luxury-sand/60 flex items-baseline justify-between">
           <div className="flex items-baseline gap-2">
             <span className="font-serif text-base sm:text-lg font-semibold text-luxury-dark">
               {formatVND(product.price)}

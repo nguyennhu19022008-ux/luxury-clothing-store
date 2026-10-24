@@ -30,7 +30,7 @@ export const AtelierStory = () => {
   ];
 
   return (
-    <section id="atelier" className="py-20 lg:py-32 bg-[#0D0D0D] text-luxury-bone border-b border-white/10 scroll-mt-20 relative overflow-hidden">
+    <section id="atelier" className="py-14 lg:py-20 bg-[#0D0D0D] text-luxury-bone border-b border-white/10 scroll-mt-20 relative overflow-hidden">
       {/* Atmospheric Transition Veil from Warm Bone to Velvet Midnight */}
       <div className="absolute top-0 inset-x-0 h-16 bg-gradient-to-b from-black/50 to-transparent pointer-events-none" />
 

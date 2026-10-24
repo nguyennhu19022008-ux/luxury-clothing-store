@@ -62,7 +62,7 @@ export const CategoryShowcase = ({ onSelectCategory }) => {
   };
 
   return (
-    <section ref={sectionRef} id="categories" className="reveal-on-scroll py-20 lg:py-32 bg-[#F7F4EE] border-b border-[#E3DDD4] scroll-mt-20">
+    <section ref={sectionRef} id="categories" className="reveal-on-scroll py-14 lg:py-20 bg-[#F7F4EE] border-b border-[#E3DDD4] scroll-mt-20">
       <div className="w-full max-w-none px-6 sm:px-12 lg:px-16 xl:px-24 2xl:px-32">
         
         {/* Section Header with text-balance and text-pretty */}

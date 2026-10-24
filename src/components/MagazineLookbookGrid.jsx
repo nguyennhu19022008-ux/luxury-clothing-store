@@ -33,11 +33,11 @@ export const MagazineLookbookGrid = ({
   });
 
   return (
-    <section id="collection" className="py-20 lg:py-32 bg-luxury-bone border-b border-luxury-sand scroll-mt-20">
+    <section id="collection" className="py-14 lg:py-20 bg-luxury-bone border-b border-luxury-sand scroll-mt-20">
       <div className="w-full max-w-none px-6 sm:px-12 lg:px-16 xl:px-24 2xl:px-32">
         
         {/* Section Header with text-balance and text-pretty */}
-        <div ref={headerRef} className="reveal-on-scroll flex flex-col items-center text-center max-w-3xl mx-auto mb-14">
+        <div ref={headerRef} className="reveal-on-scroll flex flex-col items-center text-center max-w-3xl mx-auto mb-8 sm:mb-10">
           <div className="flex items-center gap-2 mb-3">
             <span className="w-4 h-[1px] bg-luxury-gold inline-block" />
             <span className="text-[11px] font-semibold tracking-[0.25em] text-luxury-gold uppercase">
@@ -56,7 +56,7 @@ export const MagazineLookbookGrid = ({
         </div>
 
         {/* Category Filter Tabs & Sorting Toolbar */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-10 pb-4 border-b border-luxury-sand">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 sm:mb-8 pb-3 border-b border-luxury-sand max-w-[1040px] mx-auto w-full">
           
           {/* Tabs */}
           <div className="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-none" role="tablist">
@@ -98,43 +98,45 @@ export const MagazineLookbookGrid = ({
         </div>
 
         {/* Products Grid: 2-Column Wide Editorial Magazine Spread with Spotlight & 7/5 Rhythm */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-          {filteredProducts.map((product, idx) => {
-            const isSpotlight = idx === 0;
-            const rhythmClass = isSpotlight
-              ? 'lg:col-span-2'
-              : idx % 2 === 1
-              ? 'lg:pr-1'
-              : 'lg:pl-1';
+        <div className="max-w-[1040px] mx-auto w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-6 lg:gap-8">
+            {filteredProducts.map((product, idx) => {
+              const isSpotlight = idx === 0;
+              const rhythmClass = isSpotlight
+                ? 'lg:col-span-2'
+                : idx % 2 === 1
+                ? 'lg:pr-1'
+                : 'lg:pl-1';
 
-            // Lateral converging reveal: Left column slides from left, Right column slides from right
-            const revealClass = isSpotlight
-              ? 'reveal-scale'
-              : idx % 2 === 1
-              ? 'reveal-slide-left'
-              : 'reveal-slide-right';
+              // Lateral converging reveal: Left column slides from left, Right column slides from right
+              const revealClass = isSpotlight
+                ? 'reveal-scale'
+                : idx % 2 === 1
+                ? 'reveal-slide-left'
+                : 'reveal-slide-right';
 
-            return (
-              <div key={product.id} className={`${rhythmClass} flex justify-center w-full`}>
-                <ProductCard
-                  product={product}
-                  index={idx}
-                  isSpotlight={isSpotlight}
-                  revealClass={revealClass}
-                  onQuickView={onQuickView}
-                  onQuickOrder={onQuickOrder}
-                />
-              </div>
-            );
-          })}
+              return (
+                <div key={product.id} className={`${rhythmClass} flex justify-center w-full`}>
+                  <ProductCard
+                    product={product}
+                    index={idx}
+                    isSpotlight={isSpotlight}
+                    revealClass={revealClass}
+                    onQuickView={onQuickView}
+                    onQuickOrder={onQuickOrder}
+                  />
+                </div>
+              );
+            })}
+          </div>
         </div>
 
         {/* ============================================================ */}
         {/* EDITORIAL SPREAD INTERLUDE: BALANCED 2-COLUMN 16:9 SPLIT     */}
         {/* ============================================================ */}
-        <div ref={lookbookRef} id="lookbook" className="reveal-on-scroll mt-24 pt-20 border-t border-luxury-sand scroll-mt-20">
+        <div ref={lookbookRef} id="lookbook" className="reveal-on-scroll mt-16 pt-14 border-t border-luxury-sand scroll-mt-20 max-w-[1040px] mx-auto w-full">
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">
             
             {/* Left Visual: 16:9 Widescreen Lookbook Visual - slides from left */}
             <div className="reveal-slide-left relative bg-luxury-ivory border border-luxury-sand overflow-hidden aspect-[16/9] group shadow-xl satin-sheen-box">

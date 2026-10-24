@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-24T03:28:41.905Z",
+  "timestamp": "2026-10-24T03:46:51.199Z",
   "environment": {
     "nodeVersion": "v24.19.0",
     "platform": "win32",
@@ -9,7 +9,7 @@
     "total": 129,
     "passed": 129,
     "failed": 0,
-    "durationMs": 62,
+    "durationMs": 65,
     "successRate": "100.00%"
   },
   "tiers": [
@@ -18,7 +18,7 @@
       "total": 93,
       "passed": 93,
       "failed": 0,
-      "duration": 49,
+      "duration": 54,
       "results": [
         {
           "suite": "Feature 1: Slide 0 OLED Cover (Page0_Copyright)",
@@ -36,7 +36,7 @@
           "suite": "Feature 1: Slide 0 OLED Cover (Page0_Copyright)",
           "test": "1.3 Pure OLED black (#000000 / bg-black) background styling",
           "passed": true,
-          "duration": 0
+          "duration": 1
         },
         {
           "suite": "Feature 1: Slide 0 OLED Cover (Page0_Copyright)",
@@ -96,7 +96,7 @@
           "suite": "Feature 3: Frosted Glass Copyright Card",
           "test": "3.1 Frosted glass aesthetic utilizes backdrop blur and translucent dark background",
           "passed": true,
-          "duration": 0
+          "duration": 1
         },
         {
           "suite": "Feature 3: Frosted Glass Copyright Card",
@@ -132,7 +132,7 @@
           "suite": "Feature 4: 1-Click Contact Copy Utility",
           "test": "4.1 Official Email is verbatim nguyennhu19022008@gmail.com",
           "passed": true,
-          "duration": 1
+          "duration": 0
         },
         {
           "suite": "Feature 4: 1-Click Contact Copy Utility",
@@ -192,7 +192,7 @@
           "suite": "Feature 5: Keyboard Shortcuts Navigation",
           "test": "5.5 Non-navigation keys (e.g., Tab, ArrowDown, A) do not trigger page change",
           "passed": true,
-          "duration": 0
+          "duration": 1
         },
         {
           "suite": "Feature 5: Keyboard Shortcuts Navigation",
@@ -204,7 +204,7 @@
           "suite": "Feature 6: Editorial Header & Navigation",
           "test": "6.1 Header file exists in components directory",
           "passed": true,
-          "duration": 1
+          "duration": 0
         },
         {
           "suite": "Feature 6: Editorial Header & Navigation",
@@ -228,7 +228,7 @@
           "suite": "Feature 6: Editorial Header & Navigation",
           "test": "6.5 Zero emojis in Header code",
           "passed": true,
-          "duration": 0
+          "duration": 1
         },
         {
           "suite": "Feature 6: Editorial Header & Navigation",
@@ -342,7 +342,7 @@
           "suite": "Feature 9: Magazine Lookbook Grid & Product Catalog",
           "test": "9.6 Price formatting in Vietnamese Dong (VND)",
           "passed": true,
-          "duration": 25
+          "duration": 27
         },
         {
           "suite": "Feature 10: Quick View Modal",
@@ -492,7 +492,7 @@
           "suite": "Feature 14: R1 Direct Storefront Entry & Fullscreen Copyright Modal",
           "test": "14.1 App initializes directly into Storefront (useState(1))",
           "passed": true,
-          "duration": 1
+          "duration": 0
         },
         {
           "suite": "Feature 14: R1 Direct Storefront Entry & Fullscreen Copyright Modal",
@@ -522,7 +522,7 @@
           "suite": "Feature 15: R2 16:9 Widescreen Split 2-Column Layouts",
           "test": "15.1 HeroLookbook utilizes balanced 2-column split and 16:9 widescreen image",
           "passed": true,
-          "duration": 0
+          "duration": 1
         },
         {
           "suite": "Feature 15: R2 16:9 Widescreen Split 2-Column Layouts",
@@ -585,7 +585,7 @@
       "total": 22,
       "passed": 22,
       "failed": 0,
-      "duration": 5,
+      "duration": 2,
       "results": [
         {
           "suite": "Group 1: Slide 0 State & Event Boundaries",
@@ -597,7 +597,7 @@
           "suite": "Group 1: Slide 0 State & Event Boundaries",
           "test": "B1.2 Repeated Escape key presses cleanly alternate card visibility",
           "passed": true,
-          "duration": 1
+          "duration": 0
         },
         {
           "suite": "Group 1: Slide 0 State & Event Boundaries",
@@ -621,7 +621,7 @@
           "suite": "Group 2: Cart Quantities & Empty State Boundaries",
           "test": "B2.2 Submitting checkout with empty cart throws an explicit error",
           "passed": true,
-          "duration": 0
+          "duration": 1
         },
         {
           "suite": "Group 2: Cart Quantities & Empty State Boundaries",
@@ -633,7 +633,7 @@
           "suite": "Group 2: Cart Quantities & Empty State Boundaries",
           "test": "B2.4 Adding item with zero or negative quantity is safely ignored",
           "passed": true,
-          "duration": 1
+          "duration": 0
         },
         {
           "suite": "Group 2: Cart Quantities & Empty State Boundaries",
@@ -663,7 +663,7 @@
           "suite": "Group 3: Phone Number Validation Boundary Matrix",
           "test": "B3.4 Malformed, alphabetic, or out-of-bounds phone numbers are rejected",
           "passed": true,
-          "duration": 1
+          "duration": 0
         },
         {
           "suite": "Group 4: Coupon Code Robustness & Precision",
@@ -705,13 +705,13 @@
           "suite": "Group 5: Product Variations & Customer Data Integrity",
           "test": "B5.2 Same product in different colors creates separate cart items",
           "passed": true,
-          "duration": 0
+          "duration": 1
         },
         {
           "suite": "Group 5: Product Variations & Customer Data Integrity",
           "test": "B5.3 Customer name and address with Vietnamese unicode characters are preserved",
           "passed": true,
-          "duration": 1
+          "duration": 0
         },
         {
           "suite": "Group 5: Product Variations & Customer Data Integrity",
@@ -750,7 +750,7 @@
           "suite": "Interaction 4: \"Mua Ngay\" Isolation vs Cart Checkout",
           "test": "I4.1 \"Mua ngay\" single item checkout does NOT wipe existing general cart items",
           "passed": true,
-          "duration": 1
+          "duration": 0
         },
         {
           "suite": "Interaction 4: \"Mua Ngay\" Isolation vs Cart Checkout",
@@ -792,7 +792,7 @@
           "suite": "Interaction 10: Repeat Customer Shopping Workflow",
           "test": "I10.1 Completing first order clears cart and allows clean second customer transaction",
           "passed": true,
-          "duration": 0
+          "duration": 1
         }
       ]
     },
